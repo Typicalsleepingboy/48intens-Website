@@ -1,27 +1,33 @@
-export default async (req, res) => {
-    const fetch = (await import('node-fetch')).default;
-    const apiUrl = 'https://backend.saweria.co/widgets/leaderboard/all';
+const express = require('express');
+const cors = require('cors');
 
+const app = express();
+const PORT = process.env.PORT || 3000; // Gunakan PORT dari environment atau 3000
+
+app.use(cors());
+
+app.get('/top-donors', async (req, res) => {
     try {
-        console.log('Fetching data from:', apiUrl); // Log URL yang dipanggil
-        const response = await fetch(apiUrl, {
-            method: 'GET',
+        const fetch = (await import('node-fetch')).default;
+        const response = await fetch('https://backend.saweria.co/widgets/leaderboard/all', {
             headers: {
-                'Stream-Key': 'b0fc98333cc6becdd18dceef7687ff82',
-                'Content-Type': 'application/json',
+                'Stream-Key': 'b0fc98333cc6becdd18dceef7687ff82', 
             }
         });
 
-        console.log('Response Status:', response.status); // Log status respons
-
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            const errorMessage = await response.text();
+            return res.status(response.status).json({ error: `Failed to fetch data: ${errorMessage}` });
         }
 
         const data = await response.json();
-        res.status(200).json(data);
+        res.json(data);
     } catch (error) {
-        console.error('Error fetching data:', error);
-        res.status(500).json({ error: 'Failed to fetch data' });
+        console.error('Error fetching data from Saweria:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
-};
+});
+
+app.listen(PORT, () => {
+    console.log(`Proxy server running at http://localhost:${PORT}`);
+});
