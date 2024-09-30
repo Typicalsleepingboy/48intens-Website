@@ -1,7 +1,10 @@
 export default async (req, res) => {
-    const fetch = (await import('node-fetch')).default; 
-    const apiUrl = 'https://backend.saweria.co/widgets/leaderboard/all'; 
-
+    const fetch = (await import('node-fetch')).default;
+    const apiUrl = await fetch('https://backend.saweria.co/widgets/leaderboard/all', {
+        headers: {
+            'Stream-Key': 'b0fc98333cc6becdd18dceef7687ff82', 
+        }
+    });
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
