@@ -11,17 +11,19 @@ export default async (req, res) => {
             }
         });
 
-        // Menangani respons tidak ok
         if (!response.ok) {
-            const errorMessage = await response.text(); // Ambil pesan kesalahan
-            console.error('Response Error:', errorMessage); // Log pesan kesalahan
-            return res.status(response.status).json({ error: `Failed to fetch data: ${errorMessage}` });
+            const errorMessage = await response.text();
+            console.error(`Response Error (${response.status}):`, errorMessage);
+            return res.status(response.status).json({ 
+                error: `Failed to fetch data: ${response.statusText}`,
+                details: errorMessage
+            });
         }
 
-        const data = await response.json(); // Parsing data JSON
-        res.status(200).json(data); // Kirim data ke klien
+        const data = await response.json();
+        res.status(200).json(data);
     } catch (error) {
-        console.error('Error fetching data:', error); // Log kesalahan
-        res.status(500).json({ error: 'Internal Server Error' }); // Mengembalikan kesalahan server
+        console.error('Error fetching data:', error);
+        res.status(500).json({ error: 'Internal Server Error', details: error.message });
     }
 };
