@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/route/$1"
-    }
+  "builds": [{ "src": "proxy.js", "use": "@now/node" }],
+  "routes": [
+      {
+      "src": "/(.*)",
+      "dest": "proxy.js"
+      }
   ]
-}
+} 
