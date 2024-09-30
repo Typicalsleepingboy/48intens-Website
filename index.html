@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>48Intens Official</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"
+        crossorigin="anonymous"></script>
+    <meta name="author" content="48Intens Official">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="1200">
+    <link rel="icon" href="/assets/icon.png" />
+</head>
+
+<body>
+    <header>
+        <div class="container-nav">
+            <h1><a href="index.html">48Intens Official</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="member.html">Member</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="loader"></div>
+    <div class="section">
+        <div class="container">
+            <div class="slideshow-container">
+                <div class="slideshow-image">
+                    <a href="https://www.youtube.com/watch?v=5cy3vDjTfFY"><img src="/assets/heading-bg.jpg"
+                            alt="Slide 1" loading="lazy"></a>
+                </div>
+                <div class="slideshow-image">
+                    <a href="https://www.youtube.com/watch?v=OpACc2RRTlA"><img src="/assets/heading-bg1.jpg"
+                            alt="Slide 2" loading="lazy"></a>
+                </div>
+                <div class="slideshow-image">
+                    <a href="https://jkt48.com/ramadhaneventshow2024pb?lang=id"><img src="/assets/heading-bg2.jpg"
+                            alt="Slide 3" loading="lazy"></a>
+                </div>
+                <div class="slideshow-image">
+                    <a href="https://www.showroom-live.com/premium_live/officialJKT48/B45325"><img
+                            src="/assets/heading-bg3.jpg" alt="Slide 4" loading="lazy"></a>
+                </div>
+                <div class="slideshow-image">
+                    <a href="https://jkt48.com/springhascome?lang=id"><img src="/assets/heading-bg4.jpg" alt="Slide 5"
+                            loading="lazy"></a>
+                </div>
+                <div class="slideshow-image">
+                    <a href="https://jkt48.com/valkyrie48?lang=id"><img src="/assets/heading-bg5.jpg" alt="Slide 6"
+                            loading="lazy"></a>
+                </div>
+                <div class="slideshow-image">
+                    <a href="https://www.youtube.com/watch?v=XQpA7bqIcyY&ab_channel=JKT48"><img
+                            src="/assets/heading-bg6.jpeg" alt="Slide 7" loading="lazy"></a>
+                </div>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupPlayer" class="popup-player">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <iframe id="videoPlayer" width="700" height="400"
+                src="https://www.youtube.com/embed/M0q9R63Em7s?si=OKzIjym8afwC_Lfd" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <div id="scrollToTopBtn" class="scroll-to-top-btn">
+        <button onclick="scrollToTop()" title="Go to top">
+            <i class="fas fa-arrow-up" style="color:#ffff;"></i>
+        </button>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="box">
+                <h1 class="titleup"><span class="icon"><i class="fa fa-play-circle"></i></i></span> Now Live</h1>
+                <br>
+                <hr><br>
+                <p id="noLiveMessage"></p>
+                <div class="card-nowlive-container">
+                </div>
+                <br>
+                <hr><br>
+                <p id="liveCount"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="section">
+        <div class="container">
+            <div class="box">
+                <h1 class="titleup"><span class="icon"><i class="fas fa-theater-masks"></i></span> Upcoming Theater</h1>
+                <br>
+                <hr><br>
+                <p id="noTheaterMessage"></p>
+                <div id="upcoming" class="card-container"></div>
+                <br>
+                <hr><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="flex-container">
+                <div class="box-news">
+                    <h1 class="titleup"><span class="icon"><i class="fas fa-newspaper"></i></span> News</h1>
+                    <br />
+                    <hr />
+                    <div id="newsLimit"></div>
+                    <br />
+                    <a href="news.html" class="btn">Cek lainnya</a><br />
+                </div>
+                <div class="box-event">
+                    <h1 class="titleup"><span class="icon"><i class="fas fa-calendar"></i></span> Event</h1>
+                    <br />
+                    <hr />
+                    <div id="eventList"></div>
+                    <br />
+                    <a href="news.html" class="btn">Cek lainnya</a><br />
+                </div>
+                <div class="box-special">
+                    <h1 class="titleup"><span class="icon"><i class="fas fa-envelope"></i></span> Special Links</h1>
+                    <br />
+                    <hr />
+                    <div class="link-item">
+                        <a href="https://jkt48.com/theater/mvp?lang=id">⭐ JKT48 THEATER MVP</a>
+                    </div>
+                    <hr />
+                    <div class="link-item">
+                        <a href="https://jkt48.com/about/fanletter?lang=id">💌 FAN LETTER AND GIFT INFO</a>
+                    </div>
+                    <hr />
+                    <div class="link-item">
+                        <a href="https://jkt48.com/about/handshake?lang=id">🫱 YUK KITA HANDSHAKE</a>
+                    </div>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+                <div class="box">
+                    <h1 class="titleup"><span class="icon"><i class="fas fa-birthday-cake"></i></span> Next Birthday
+                        Member/Trainee JKT48
+                    </h1>
+                    <br />
+                    <hr />
+                    <br />
+                    <div class="birthnext"></div>
+                    <br />
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="box">
+                <h1 class="titleup"><span class="icon"><i class="fas fa-user-friends"></i></span> 48 Group</h1>
+                <br />
+                <hr />
+                <br />
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a href="https://www.akb48.co.jp/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/akb.png" alt="AKB48"
+                                loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="https://www.ske48.co.jp/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/ske.png" alt="SKE48"
+                                loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="http://www.nmb48.com/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/nmb.png" alt="NMB48"
+                                loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="http://www.hkt48.jp/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948757/hkt.png" alt="HKT48"
+                                loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="https://ngt48.jp/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/ngt.png" alt="NGT48"
+                                loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="https://www.stu48.com/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/stu.png" alt="STU48"
+                                loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="http://www.bnk48.com/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948757/bnk.png" alt="BNK48"
+                                loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="https://mnl48.ph/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/mnl.png" alt="MNL48"
+                                loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="http://www.akb48-china.com/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/akbsh.png"
+                                alt="AKBSH" loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="http://www.akb48teamtp.com/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/akbtp.png"
+                                alt="AKBTP" loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="https://cgm48official.com/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948757/cgm.png" alt="CGM48"
+                                loading="lazy" /></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="https://klp48.my/"><img
+                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/klp.png" alt="KLP48"
+                                loading="lazy" /></a>
+                    </div>
+                </div>
+                <br />
+                <hr />
+                <br />
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Powered by ♥️ <a style="text-decoration:none" href="https://discord.gg/48intenscommunity"> 48Intens Official</a>
+        <div class="social-icons">
+            <p>Lets Connect With Us</p>
+            <a href="https://www.instagram.com/48intens" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram icon"></i>
+            </a>
+            <a href="https://discord.gg/48intenscommunity" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-discord icon"></i>
+            </a>
+            <a href="about.html" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-wifi icon"></i>
+            </a>
+        </div>
+        <br>
+    </footer>
+
+    <script>
+        // smooth scroll
+
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollToTopBtn").style.display = "none";
+            }
+        }
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // lazy load
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyloadImages;
+
+            if ("IntersectionObserver" in window) {
+                lazyloadImages = document.querySelectorAll(".lazy");
+                var imageObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            var image = entry.target;
+                            image.src = image.dataset.src;
+                            image.classList.remove("lazy");
+                            imageObserver.unobserve(image);
+                        }
+                    });
+                });
+
+                lazyloadImages.forEach(function (image) {
+                    imageObserver.observe(image);
+                });
+            } else {
+                var lazyloadThrottleTimeout;
+
+                function lazyload() {
+                    if (lazyloadThrottleTimeout) {
+                        clearTimeout(lazyloadThrottleTimeout);
+                    }
+
+                    lazyloadThrottleTimeout = setTimeout(function () {
+                        var scrollTop = window.pageYOffset;
+                        lazyloadImages = document.querySelectorAll(".lazy");
+                        lazyloadImages.forEach(function (img) {
+                            if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                                img.src = img.dataset.src;
+                                img.classList.remove('lazy');
+                            }
+                        });
+                        if (lazyloadImages.length == 0) {
+                            document.removeEventListener("scroll", lazyload);
+                            window.removeEventListener("resize", lazyload);
+                            window.removeEventListener("orientationChange", lazyload);
+                        }
+                    }, 20);
+                }
+
+                document.addEventListener("scroll", lazyload);
+                window.addEventListener("resize", lazyload);
+                window.addEventListener("orientationChange", lazyload);
+                lazyload();
+            }
+        });
+
+        // loader script
+        const loader = document.getElementById('loader');
+        setTimeout(() => {
+            loader.classList.add('hide');
+            document.body.style.overflow = 'visible';
+        }, 3000)
+        document.body.style.overflow = 'hidden';
+
+
+        // Function to open the pop-up player
+        function openPopup() {
+            document.getElementById("popupPlayer").style.display = "flex";
+            document.body.style.overflow = "hidden"; // Disable scrolling
+        }
+
+        // Function to close the pop-up player
+        function closePopup() {
+            document.getElementById("popupPlayer").style.display = "none";
+            document.body.style.overflow = "visible"; // Enable scrolling
+            // Stop the video
+            var iframe = document.getElementById('videoPlayer');
+            iframe.src = ""; // Reset the src to stop the video
+            iframe.src = "https://www.youtube.com/embed/M0q9R63Em7s?si=OKzIjym8afwC_Lfd";
+        }
+
+        // Open the pop-up player when the page loads
+        window.onload = function () {
+            setTimeout(openPopup, 1000); // Delay for 1 second
+        }
+
+
+
+
+    </script>
+
+
+
+    <!--SCRIPT-->
+    <script src="script/birthday.js"></script>
+    <script src="script/nowlive.js"></script>
+    <script src="script/event.js"></script>
+    <script src="script/news.js"></script>
+    <script src="script/theater.js"></script>
+    <script src="script/image.js"></script>
+    <script src="script/inject.js"></script>
+    <script src="script/log.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+</body>
+
+</html>

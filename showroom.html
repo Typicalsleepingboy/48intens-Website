@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>48Intens Official</title>
+    <meta name="description" content="BRINGING JKT48 CLOSER TO YOU" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"
+        crossorigin="anonymous"></script>
+    <meta name="author" content="Community48">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="1200">
+    <link rel="icon" href="/assets/icon.png" />
+    <meta property="og:image" content="https://ucarecdn.com/f76368fe-4c0e-4b81-a1bc-58e7c4689670/Untitled2.jpg">
+    <meta property="og:title" content="Community48">
+    <meta property="og:description" content="BRINGING JKT48 CLOSER TO YOU">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1a2130;
+    }
+
+    .card {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #watermark {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 50px;
+        opacity: 0.8;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    .card-body {
+        padding: 20px;
+        background-color: #4b5f83;
+        border-radius: 20px;
+    }
+
+    #video-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    #video {
+        width: 100%;
+        height: auto;
+    }
+
+    #quality-wrapper {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #quality-list {
+        padding: 0;
+    }
+
+    #quality-list li {
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    #quality-list li:last-child {
+        margin-right: 0;
+
+    }
+</style>
+</head>
+
+<body class="text-center">
+    <header>
+        <div class="container-nav">
+            <h1><a href="index.html">48Intens Official</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="member.html">Member</a></li>
+
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="section">
+        <div class="container">
+            <div class="box">
+                <h1 class="titleup"> <span id="liveMemberName"></span></h1>
+                <br>
+                <hr><br>
+                <div class="card">
+                    <div class="card-body">
+                        <div id="video-container">
+                            <video id="video" class="card-img-top" controls></video>
+                            <img id="watermark" src="/assets/watermark.png" alt="Watermark">
+                        </div>
+                        <div id="quality-wrapper">
+                            <ul id="quality-list" class="list-unstyled mb-0"></ul>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr><br>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="box">
+                <h1 class="titleup"><span class="icon"><i class="fa fa-play-circle"></i></i></span> Live Lainnya</h1>
+                <br>
+                <hr><br>
+                <p id="noLiveMessage"></p>
+                <div class="card-nowlive-container-up">
+                </div>
+                <br>
+                <hr><br>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Powered by ♥️ <a style="text-decoration:none" href="https://discord.gg/48intenscommunity"> 48Intens Official</a>
+        <div class="social-icons">
+            <p>Lets Connect With Us</p>
+            <a href="https://www.instagram.com/48intens" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram icon"></i>
+            </a>
+            <a href="https://discord.gg/48intenscommunity" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-discord icon"></i>
+            </a>
+            <a href="about.html" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-wifi icon"></i>
+            </a>
+        </div>
+        <br>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+    <script src="https://48streams.vercel.app/player/mousetrap.min.js" charset="utf-8"></script>
+    <script src="script/nowlive.js"></script>
+    <script src="script/player.js"></script>
+    <script src="script/inject.js"></script>
+</body>
+
+</html>

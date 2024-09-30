@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>48Intens Official</title>
+    <meta name="description" content="BRINGING JKT48 CLOSER TO YOU" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="author" content="Community48">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="1200">
+    <link rel="icon" href="/assets/icon.png" />
+    <meta property="og:image" content="https://ucarecdn.com/f76368fe-4c0e-4b81-a1bc-58e7c4689670/Untitled2.jpg">
+    <meta property="og:title" content="Community48">
+    <meta property="og:description" content="BRINGING JKT48 CLOSER TO YOU">
+    <style>
+        .center-image {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .center-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #eb6b23;
+        }
+
+        .flex-container-base {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .table-container {
+            flex: 1;
+        }
+
+        .box {
+            width: 100%;
+        }
+
+        .discord-widget {
+            width: 350px;
+            /* Adjust width as needed */
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <div class="container-nav">
+            <h1><a href="index.html">48Intens Official</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="member.html">Member</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="box">
+                <h1 class="titleup">
+                    <span class="icon"><i class="fa-solid fa-circle-info"></i></span>
+                    About 48Intens Official
+                </h1>
+                <br />
+                <hr />
+                <div class="content">
+                    <div class="center-image">
+                        <img src="/assets/logo.png" alt="Centered Image">
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <p>
+                                Project website ini masih dalam tahap pengembangan dan dibuat untuk membawa fans JKT48
+                                lebih mendalami tentang JKT48. Di website ini, Anda dapat menonton live Showroom secara
+                                fullscreen dan IDN secara fullscreen juga,
+                                namun masih dalam tahap pengembangan. Project website ini dibuat oleh <a
+                                    href="https://twitter.com/Typicalsleeping"
+                                    style="color: #eb6b23;">TypicalSleepingBoy</a> dan <a
+                                    href="https://discord.gg/msFGxQUaRU" style="color:  #eb6b23;">Mas
+                                    Zegion</a>, dan mohon maaf apabila websitenya sering down karena kami
+                                memakai hostingan gratis dari </a><a href="https://vercel.com/"
+                                    style="color:  #eb6b23;">vercel.com😂😂</a>, Dan support data dari website
+                                teman saya yaitu <a href="https://dc.crstlnz.my.id/"
+                                    style="color:  #eb6b23;">https://dc.crstlnz.my.id/</a>.
+                                </br>
+                                </br>
+                                </br>
+                                </a>dan disini untuk penyimpanan saya memakai :</a>
+                            </p>
+                        </div>
+                        <div class="column">
+                            <img src="/assets/Uploadcare.png" alt="Uploadcare" style="max-width: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <br />
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="flex-container-base">
+                <div class="table-container">
+                    <div class="box">
+                        <h1 class="titleup"><span class="icon"><i class="fas fa-ranking-star"></i></span> Top Donatur
+                            48Intens</h1>
+                        <br>
+                        <hr><br>
+                        <table id="saweriaTable">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Name</th>
+                                    <th>Currency</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <br>
+                        <hr><br>
+                    </div>
+                </div>
+                <div class="discord-widget-container">
+                    <div class="box">
+                        <h1 class="titleup"><span class="icon"><i class="fa-brands fa-discord"></i></span> Discord 48Intens</h1>
+                        <br />
+                        <hr />
+                        <br />
+                        <iframe src="https://discord.com/widget?id=1185883650206744576&theme=dark" width="350"
+                            height="400" allowtransparency="true" frameborder="0"
+                            sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+                        <br />
+                        <br />
+                        <hr />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="section">
+        <div class="container">
+            <div class="box">
+                <h2 class="titleup"><span class="icon"><i class="fas fa-wifi"></i></span> Status Page</h2><br>
+                <hr><br>
+                <script type="text/javascript" src="https://stttc.b-cdn.net/iframeResizer/iframeResizer.min.js"></script>
+                <iframe class="htframe" src="https://wl.hetrixtools.com/r/e700cbcd12d658d8cc1287a42c6bad0d/" width="100%" scrolling="no" style="border:none;" sandbox="allow-scripts allow-same-origin allow-popups" onload="iFrameResize([{log:false}],'.htframe')"></iframe>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        Powered by ♥️ <a style="text-decoration:none" href="https://discord.gg/48intenscommunity"> 48Intens Official</a>
+        <div class="social-icons">
+            <p>Lets Connect With Us</p>
+            <a href="https://www.instagram.com/48intens" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram icon"></i>
+            </a>
+            <a href="https://discord.gg/48intenscommunity" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-discord icon"></i>
+            </a>
+            <a href="about.html" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-wifi icon"></i>
+            </a>
+        </div>
+        <br>
+    </footer>
+    <script>
+        fetch('/script/saweria.json')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.querySelector('#saweriaTable tbody');
+                let tableHTML = '';
+
+                data.forEach((entry, index) => {
+                    tableHTML += `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>${entry.name}</td>
+                    <td>${entry.currency}</td>
+                </tr>
+            `;
+                });
+
+                tableBody.innerHTML = tableHTML;
+            })
+            .catch(error => console.error('Error fetching Saweria data:', error));
+
+    </script>
+
+    <!--SCRIPT-->
+    <script src="script/live.js"></script>
+    <script src="script/gradhistory.js"></script>
+    <script src="script/inject.js"></script>
+</body>
+
+</html>
