@@ -359,6 +359,7 @@
                 "title": "SHOWROOM",
                 "url": "https://www.showroom-live.com/JKT48_Callie"
             },
+            
             {
                 "title": "IDN",
                 "url": "https://click.idn.media/VKUf?af_dp=idnapp://profile/0609625b-63dc-4e08-bd4b-4dfe124220ba&af_web_dp=https://www.idn.app/jkt48_callie&c=web-android&deep_link_value=profile/0609625b-63dc-4e08-bd4b-4dfe124220ba&pid=idnapp"
@@ -993,7 +994,7 @@
             "Gendis"
         ],
         "img": "https://static.showroom-live.com/image/room/cover/4e2f064db08d9b22d45a2ff98271ca8754e2f058981823193d38c8e22cb09e00_m.jpeg?v=1683720244",
-        "img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1683991307/jkt48/kabesha/Gendis_mayrannisa_i5nkzm.jpg",
+        "img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1683991307/jkt48/kabesha/Gen dis_mayrannisa_i5nkzm.jpg",
         "url": "Gen dis",
         "description": "📌 Name: Gendis Mayrannisa\r\n🎂 Birthday: 23 June 2010\r\n🩸 Blood type: B\r\n🏹 Zodiac signs: Cancer\r\n📝 Hobby: Singing, Golf driving, Swimming",
         "group": "jkt48",
@@ -1436,6 +1437,73 @@
         "is_graduate": false,
         "generation": "Gen 10",
         "idn_username": "jkt48_lyn"
+    },
+    {
+        "name": "Pia Meraleo",
+        "nicknames": [
+            "Pia"
+        ],
+        "img": "https://res.cloudinary.com/dbim4qou7/image/upload/v1722025411/piasquare.jpg",
+        "img_alt": "https://res.cloudinary.com/dbim4qou7/image/upload/v1722025313/pia.jpg"
+    },
+    {
+        "name": "Tana Nona",
+        "nicknames": [
+            "Tana"
+        ],
+        "img": "https://res.cloudinary.com/dbim4qou7/image/upload/v1722025593/tanasquare.jpg",
+        "img_alt": "https://res.cloudinary.com/dbim4qou7/image/upload/v1722025525/tana.jpg"
+    },
+    {
+        "name": "Kanaia Asa",
+        "nicknames": [
+            "Kanaia"
+        ],
+        "img": "https://res.cloudinary.com/dbim4qou7/image/upload/v1722025740/kanaiasquare.jpg",
+        "img_alt": "https://res.cloudinary.com/dbim4qou7/image/upload/v1722025657/kanaia.jpg"
+    },
+    {
+        "_id": "65ce68ed1dd7aa2c8c0ca78e",
+        "name": "officialJKT48",
+        "nickname": [
+            "JKT48 Official",
+            "JKT48",
+            "officialJKT48"
+        ],
+        "img": "https://static.showroom-live.com/image/room/cover/73f495d564945090f4af7338a42ce09ffa12d35fbfa8ce35c856220bcf96c5f3_m.png?v=1686579137",
+        "img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/s--rRdgtH_E--/c_fill,w_150/v1697402288/assets/img/jkt48poster1_pemrgm.jpg",
+        "url": "jkt48",
+        "group": "official",
+        "socials": [
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/officialJKT48"
+            },
+            {
+                "title": "Youtube",
+                "url": "https://www.youtube.com/@JKT48"
+            },
+            {
+                "title": "Instagram",
+                "url": "https://www.instagram.com/jkt48/"
+            },
+            {
+                "title": "TikTok",
+                "url": "https://www.tiktok.com/@jkt48.official"
+            },
+            {
+                "title": "SHOWROOM",
+                "url": "https://www.showroom-live.com/officialJKT48"
+            },
+            {
+                "title": "IDN",
+                "url": "https://click.idn.media/VKUf?af_dp=idnapp://profile/50a27780-93e7-4e40-8474-60f6e0cca6da&af_web_dp=https://www.idn.app/jkt48-official&c=web-android&deep_link_value=profile/50a27780-93e7-4e40-8474-60f6e0cca6da&pid=idnapp"
+            }
+        ],
+        "room_id": 332503,
+        "sr_exists": true,
+        "is_graduate": false,
+        "idn_username": "jkt48-official"
     },
     {
         "_id": "65ce68e71dd7aa2c8c0ca62e",
