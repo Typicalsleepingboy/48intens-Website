@@ -1,33 +1,20 @@
-const express = require('express');
-const cors = require('cors');
+const fetch = require('node-fetch');
 
-const app = express();
-const PORT = 3000;
+export default async (req, res) => {
+    const apiUrl = 'https://backend.saweria.co/widgets/leaderboard/all'; // Ganti dengan URL API Anda
 
-
-app.use(cors());
-
-app.get('/top-donors', async (req, res) => {
     try {
-      const fetch = (await import('node-fetch')).default;
-        const response = await fetch('https://backend.saweria.co/widgets/leaderboard/all', {
-            headers: {
-                'Stream-Key': 'b0fc98333cc6becdd18dceef7687ff82', 
-            }
-        });
-
+        const response = await fetch(apiUrl);
         if (!response.ok) {
-            return res.status(response.status).json({ error: 'Failed to fetch data from Saweria' });
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
-
+        
         const data = await response.json();
-        res.json(data);
+        
+        // Kirimkan data ke klien
+        res.status(200).json(data);
     } catch (error) {
-        console.error('Error fetching data from Saweria:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        console.error('Error fetching data:', error);
+        res.status(500).json({ error: 'Failed to fetch data' });
     }
-});
-
-app.listen(PORT, () => {
-    console.log(`Proxy server running at http://localhost:${PORT}`);
-});
+};
