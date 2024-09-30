@@ -1,25 +1,24 @@
 export default async (req, res) => {
     const fetch = (await import('node-fetch')).default;
-    const apiUrl = 'https://backend.saweria.co/widgets/leaderboard/all'; // URL API yang benar
+    const apiUrl = 'https://backend.saweria.co/widgets/leaderboard/all';
 
     try {
-        // Mengambil data dari API dengan header yang diperlukan
+        console.log('Fetching data from:', apiUrl); // Log URL yang dipanggil
         const response = await fetch(apiUrl, {
             method: 'GET',
             headers: {
-                'Stream-Key': 'b0fc98333cc6becdd18dceef7687ff82', // Tambahkan header di sini
-                'Content-Type': 'application/json' // Optional: tambahkan jika diperlukan
+                'Stream-Key': 'b0fc98333cc6becdd18dceef7687ff82',
+                'Content-Type': 'application/json',
             }
         });
 
-        // Memeriksa apakah respons OK
+        console.log('Response Status:', response.status); // Log status respons
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-
-        // Kirimkan data ke klien
         res.status(200).json(data);
     } catch (error) {
         console.error('Error fetching data:', error);
