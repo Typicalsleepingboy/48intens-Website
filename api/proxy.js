@@ -1,7 +1,6 @@
-
 export default async (req, res) => {
-    const fetch = (await import('node-fetch')).default;
-    const apiUrl = 'https://backend.saweria.co/widgets/leaderboard/all'; // Ganti dengan URL API Anda
+    const fetch = (await import('node-fetch')).default; 
+    const apiUrl = 'https://backend.saweria.co/widgets/leaderboard/all'; 
 
     try {
         const response = await fetch(apiUrl);
