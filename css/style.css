@@ -1412,6 +1412,20 @@ footer a:hover {
 }
 
 
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    border-radius: 4px;
+		color: #000000;
+    border: 1px solid #ccc;
+}
+
 
 /* Untuk perangkat seluler dengan lebar layar kurang dari atau sama dengan 768px */
 @media (max-width: 768px) {
