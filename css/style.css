@@ -461,7 +461,6 @@ a {
 
 .slideshow-image img {
 	width: 100%;
-	height: auto;
 	border-radius: 20px;
 	box-shadow: 0 10px 80px rgba(0, 0, 0, 0.267);
 }
@@ -1618,23 +1617,15 @@ footer a:hover {
 		display: none;
 	}
 
-	.slideshow-image {
-		width: 110%;
-		height: 90%;
+	.dot {
+		width: 6px;
+		height: 6px;
 	}
 
 	.slideshow-image img {
-		width: 91%;
-		height: 120%;
-		box-shadow: none;
-		margin-right: 99px;
-		border-radius: 10px;
-	}
-
-	.dot {
-		margin-top: 30px;
-		width: 6px;
-		height: 6px;
+		width: 650px;
+		height: 140px;
+		border-radius: 20px;
 	}
 
 	.slideshow-container {

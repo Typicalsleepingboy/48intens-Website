@@ -1,12 +1,9 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Fungsi untuk menampilkan slide berikutnya atau sebelumnya
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
-
-// Fungsi untuk menampilkan slide yang dipilih
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
