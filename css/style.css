@@ -1482,6 +1482,22 @@ footer a:hover {
 		margin: 0;
 	}
 	
+	.search-container {
+    display: flex;
+    flex-direction: column;
+		align-items: center;
+    justify-content: center;
+}
+
+	.search-container input[type="text"] {
+    padding: 8px;
+    width: 200px;
+		margin-top: 10px;
+    border-radius: 4px;
+		color: #000000;
+    border: 1px solid #ccc;
+}
+
 
 	.banner {
 		width: 100%;
@@ -1608,7 +1624,7 @@ footer a:hover {
 	}
 
 	.slideshow-image img {
-		width: 90%;
+		width: 91%;
 		height: 120%;
 		box-shadow: none;
 		margin-right: 99px;

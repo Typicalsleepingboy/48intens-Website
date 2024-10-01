@@ -27,41 +27,6 @@
             max-width: 100%;
             height: auto;
         }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #eb6b23;
-        }
-
-        .flex-container-base {
-            display: flex;
-            gap: 20px;
-            justify-content: space-between;
-        }
-
-        .table-container {
-            flex: 1;
-        }
-
-        .box {
-            width: 100%;
-        }
-
-        .discord-widget {
-            width: 350px;
-            /* Adjust width as needed */
-        }
     </style>
 </head>
 
@@ -94,27 +59,14 @@
                     <div class="columns">
                         <div class="column">
                             <p>
-                                Project website ini masih dalam tahap pengembangan dan dibuat untuk membawa fans JKT48
-                                lebih mendalami tentang JKT48. Di website ini, Anda dapat menonton live Showroom secara
-                                fullscreen dan IDN secara fullscreen juga,
-                                namun masih dalam tahap pengembangan. Project website ini dibuat oleh <a
-                                    href="https://twitter.com/Typicalsleeping"
-                                    style="color: #eb6b23;">TypicalSleepingBoy</a> dan <a
-                                    href="https://discord.gg/msFGxQUaRU" style="color:  #eb6b23;">Mas
-                                    Zegion</a>, dan mohon maaf apabila websitenya sering down karena kami
-                                memakai hostingan gratis dari </a><a href="https://vercel.com/"
-                                    style="color:  #eb6b23;">vercel.com😂😂</a>, Dan support data dari website
-                                teman saya yaitu <a href="https://dc.crstlnz.my.id/"
+                                48Intens adalah fanbase besar dan aktif untuk JKT48 dengan lebih dari 45,000 member. Kami selalu memberikan informasi terbaru seputar JKT48 setiap hari, termasuk berita, event, dan masih banyak lagi.
+                                 Kami juga memiliki segmen - segmen keren seputar JKT48. Gabung dengan 48Intens untuk mendapatkan update tercepat, berpartisipasi dalam diskusi seru, dan merasakan kebersamaan dengan sesama fans JKT48. 
+                                 Jangan lewatkan kesempatan untuk menjadi bagian dari komunitas yang penuh semangat dan dukung idola kita bersama-sama!. Dan support data dari website
+                                 teman saya yaitu <a href="https://dc.crstlnz.my.id/"
                                     style="color:  #eb6b23;">https://dc.crstlnz.my.id/</a>.
                                 </br>
-                                </br>
-                                </br>
-                                </a>dan disini untuk penyimpanan saya memakai :</a>
-                            </p>
-                        </div>
-                        <div class="column">
-                            <img src="/assets/Uploadcare.png" alt="Uploadcare" style="max-width: 100%;">
-                        </div>
+                            </br>
+                        </br>
                     </div>
                 </div>
                 <hr />
@@ -123,67 +75,6 @@
         </div>
     </div>
 
-    <div class="section">
-        <div class="container">
-            <div class="flex-container-base">
-                <div class="table-container">
-                    <div class="box">
-                        <h1 class="titleup"><span class="icon"><i class="fas fa-ranking-star"></i></span> Top Donatur
-                            48Intens</h1>
-                        <br>
-                        <hr><br>
-                        <table id="saweriaTable">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Name</th>
-                                    <th>Currency</th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                        <br>
-                        <hr><br>
-                    </div>
-                </div>
-                <div class="discord-widget-container">
-                    <div class="box">
-                        <h1 class="titleup"><span class="icon"><i class="fa-brands fa-discord"></i></span> Discord
-                            48Intens</h1>
-                        <br />
-                        <hr />
-                        <br />
-                        <iframe src="https://discord.com/widget?id=1185883650206744576&theme=dark" width="350"
-                            height="400" allowtransparency="true" frameborder="0"
-                            sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
-                        <br />
-                        <br />
-                        <hr />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="box">
-                <h2 class="titleup"><span class="icon"><i class="fas fa-wifi"></i></span> Status Page</h2><br>
-                <hr><br>
-                <script type="text/javascript"
-                    src="https://stttc.b-cdn.net/iframeResizer/iframeResizer.min.js"></script>
-                <iframe class="htframe" src="https://wl.hetrixtools.com/r/e700cbcd12d658d8cc1287a42c6bad0d/"
-                    width="100%" scrolling="no" style="border:none;"
-                    sandbox="allow-scripts allow-same-origin allow-popups"
-                    onload="iFrameResize([{log:false}],'.htframe')"></iframe>
-                <br>
-                <br>
-                <hr>
-                <br>
-                <br>
-            </div>
-        </div>
-    </div>
 
     <footer>
         Powered by ♥️ <a style="text-decoration:none" href="https://discord.gg/48intenscommunity"> 48Intens Official</a>
@@ -201,47 +92,6 @@
         </div>
         <br>
     </footer>
-    <script>
-    async function fetchTopDonors() {
-        try {
-            const response = await fetch('/api/proxy'); // Pastikan ini sesuai dengan rute proxy
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-            return data.donors || []; // Sesuaikan dengan struktur data yang diterima
-        } catch (error) {
-            console.error('Error fetching top donors:', error);
-            return []; // Mengembalikan array kosong jika terjadi error
-        }
-    }
-
-        async function populateTopDonors() {
-            const donors = await fetchTopDonors();
-            const tableBody = document.querySelector('#saweriaTable tbody');
-            tableBody.innerHTML = '';
-
-            if (donors.length === 0) {
-                const row = document.createElement('tr');
-                row.innerHTML = '<td colspan="3">No top donors found.</td>';
-                tableBody.appendChild(row);
-                return;
-            }
-
-            donors.forEach((donor, index) => {
-                const row = document.createElement('tr');
-                const amount = `Rp ${donor.amount.toLocaleString()}`;
-                row.innerHTML = `
-                    <td>${index + 1}</td>
-                    <td>${donor.donator}</td>
-                    <td>${amount}</td>
-                `;
-                tableBody.appendChild(row);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', populateTopDonors);
-    </script>
 </body>
 
 </html>
