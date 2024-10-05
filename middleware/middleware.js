@@ -1,4 +1,4 @@
-const isMaintenance = false;  
+const isMaintenance = tru;  
 
 if (isMaintenance) {
   if (window.location.pathname !== '/middleware/maintenance.html') {
