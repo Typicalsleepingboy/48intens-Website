@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "redirects": [
+  "rewrites": [
     {
-      "source": "/:path(.+).html",
-      "destination": "/:path",
-      "permanent": true
+      "source": "/api/:path*",
+      "destination": "https://www.48intens.com/:path*"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/:path*.html"
     }
   ]
 }
