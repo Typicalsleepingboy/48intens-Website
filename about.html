@@ -28,7 +28,13 @@
             height: auto;
         }
     </style>
-
+    <script>
+        // Cek jika URL berisi "index.html" atau "about.html"
+        if (window.location.pathname.endsWith("about.html")) {
+            // Mengganti URL dari index.html menjadi root domain "/"
+            window.history.replaceState(null, "", window.location.pathname.replace("about.html", "about"));
+        }
+    </script>
 </head>
 
 <body>
