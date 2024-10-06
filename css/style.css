@@ -22,16 +22,7 @@ body {
 	margin-right: 10px;
 }
 
-.cloudfare {
-      display: none;
-	align-items:center;
-	justify-content: center;
-	width: 90vw;
-	height:85vh;
-	background-color: white;
-	flex-direction: row;
-}
-	
+
 
 .countdown {
 	display: flex;
