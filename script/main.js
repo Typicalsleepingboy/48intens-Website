@@ -4,7 +4,6 @@ window.onloadTurnstileCallback = function () {
     callback: function (token) {
       console.log(`Challenge Success ${token}`);
       setTimeout(() => {
-        document.getElementById("myWidget").style.display = "none";
       }, 2000);
     },
   });
