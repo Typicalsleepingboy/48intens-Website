@@ -383,6 +383,15 @@
             setTimeout(openPopup, 1000); // Delay for 1 second
         }
 
+        // Fungsi untuk menghapus index.html atau about.html dari URL
+        (function() {
+            var currentUrl = window.location.href; // Mendapatkan URL saat ini
+        
+            // Jika URL berisi "index.html", hapus dari URL
+            if (currentUrl.includes('index.html')) {
+                window.history.replaceState({}, document.title, currentUrl.replace('index.html', ''));
+            }
+        })();
 
 
 
