@@ -2,10 +2,6 @@
   "version": 2,
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "https://www.48intens.com/:path*"
-    },
-    {
       "source": "/:path*",
       "destination": "/:path*.html"
     }
