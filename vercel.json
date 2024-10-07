@@ -10,15 +10,19 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/home.html"
+      "destination": "/home.html"  
     },
     {
-      "source": "/css/:path*", 
-      "destination": "/css/:path*"
+      "source": "/css/:path*",   
+      "destination": "/css/:path*"  
+    },
+    {
+      "source": "/:path*.css",  
+      "destination": "/:path*.css"  
     },
     {
       "source": "/:path*",  
-      "destination": "/:path*.html"
+      "destination": "/:path*.html"  
     }
   ]
 }
