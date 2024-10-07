@@ -2,28 +2,23 @@
   "version": 2,
   "redirects": [
     {
-      "source": "https://www.48intens.com/:path*",
+      "source": "/:path*",
       "destination": "https://48intens.com/:path*",
       "permanent": true
     }
   ],
-
   "rewrites": [
     {
       "source": "/",
-      "destination": "/home.html"  
+      "destination": "/home.html"
     },
     {
-      "source": "/:path*",
-      "destination": "/:path*.html" 
-    },
-    {
-      "source": "/css/:path*",   
+      "source": "/css/:path*", 
       "destination": "/css/:path*"
     },
     {
-      "source": "/:css*.css",
-      "destination": "/:css*.css"
+      "source": "/:path*",  
+      "destination": "/:path*.html"
     }
   ]
 }
