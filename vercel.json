@@ -1,5 +1,12 @@
 {
   "version": 2,
+  "redirects": [
+    {
+      "source": "https://www.48intens.com/:path*",
+      "destination": "https://48intens.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
