@@ -1421,11 +1421,13 @@ footer a:hover {
 
 .search-container input[type="text"] {
     padding: 8px;
+		background-color: #4b5f83;
     width: 250px;
-    border-radius: 4px;
-		color: #000000;
-    border: 1px solid #ccc;
+    border-radius: 10px;
+		color: #ffffff;
+    border: 50px;
 }
+
 
 
 /* Untuk perangkat seluler dengan lebar layar kurang dari atau sama dengan 768px */
