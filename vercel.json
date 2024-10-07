@@ -3,11 +3,18 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/home.html"  
+      "destination": "/home.html"
     },
     {
       "source": "/:path*",
-      "destination": "/:path*.html" 
+      "destination": "/:path*.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/48intenscommunity",
+      "permanent": true
     }
   ]
 }
