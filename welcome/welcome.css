@@ -182,7 +182,7 @@ body {
   }
 
   .carousel-images {
-    width: calc(100% * 2); /* You can adjust the image count or width depending on image needs */
+    width: calc(100% * 2); 
   }
 
   .social-icons {

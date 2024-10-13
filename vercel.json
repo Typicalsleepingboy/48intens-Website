@@ -13,7 +13,7 @@
   "redirects": [
     {
       "source": "/discord",
-      "destination": "https://discord.gg/48intenscommunity",
+      "destination": "https://48intens.com/discord",
       "permanent": true
     }
   ]

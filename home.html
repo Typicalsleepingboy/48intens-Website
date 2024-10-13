@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>48Intens Official</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <meta name="author" content="48Intens Official" />
+    <meta name="description" content="48Intens Official - 48Intens adalah fanbase besar dan aktif untuk JKT48 dengan lebih dari 45,000 member. Kami selalu memberikan informasi terbaru seputar JKT48 setiap hari, termasuk berita, event, dan masih banyak lagi." />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <meta name="author" content="48Intens Official">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="/assets/icon.png" />
-    
+
 </head>
 
 <body>
@@ -24,7 +26,6 @@
                 <li><a href="/news">News</a></li>
                 <li><a href="/member">Member</a></li>
                 <li><a href="/about">About</a></li>
-                <li><a href="https://48intens.com/discord" target="_blank">Discord</a></li>
             </ul>
         </div>
     </header>
@@ -41,8 +42,8 @@
                             alt="Slide 2" loading="lazy"></a>
                 </div>
                 <div class="slideshow-image">
-                    <a href="https://ssk.jkt48.com/2024/id/vote"><img src="/assets/heading-bg6.jpg"
-                            alt="Slide 8" loading="lazy"></a>
+                    <a href="https://ssk.jkt48.com/2024/id/vote"><img src="/assets/heading-bg6.jpg" alt="Slide 8"
+                            loading="lazy"></a>
                 </div>
                 <div class="slideshow-image">
                     <a href="https://jkt48.com/ramadhaneventshow2024pb?lang=id"><img src="/assets/heading-bg2.jpg"
@@ -87,8 +88,17 @@
 
     <div class="section">
         <div class="container">
+            <div class="discord-container">
+                <div class="discord-bg">
+                    <img src="/assets/logo.png" alt="Discord Logo">
+                </div>
+                <div class="label">48Intens Community Discord</div>
+                <div class="member-count" id="memberCount">Loading data...</div>
+                <a class="btn" href="https://48intens.com/discord" target="_blank">Join Noww</a>
+            </div>
+
             <div class="box">
-                <h1 class="titleup"><span class="icon"><i class="fa fa-play-circle"></i></i></span> Now Live</h1>
+                <h1 class="titleup"><span class="icon"><i class="fa fa-play-circle"></i></span> Now Live</h1>
                 <br>
                 <hr><br>
                 <p id="noLiveMessage"></p>
@@ -100,8 +110,6 @@
             </div>
         </div>
     </div>
-
-
 
 
     <div class="section">
@@ -161,19 +169,19 @@
 
     <div class="section">
         <div class="container">
-                <div class="box">
-                    <h1 class="titleup"><span class="icon"><i class="fas fa-birthday-cake"></i></span> Next Birthday
-                        Member/Trainee JKT48
-                    </h1>
-                    <br />
-                    <hr />
-                    <br />
-                    <div class="birthnext"></div>
-                    <br />
-                    <hr />
-                </div>
+            <div class="box">
+                <h1 class="titleup"><span class="icon"><i class="fas fa-birthday-cake"></i></span> Next Birthday
+                    Member/Trainee JKT48
+                </h1>
+                <br />
+                <hr />
+                <br />
+                <div class="birthnext"></div>
+                <br />
+                <hr />
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -254,13 +262,13 @@
     </div>
 
     <footer>
-        Powered by ♥️ <a style="text-decoration:none" href="https://discord.gg/48intenscommunity"> 48Intens Official</a>
+        Powered by ♥️ <a style="text-decoration:none" href="https://48intens.com/discord"> 48Intens Official</a>
         <div class="social-icons">
             <p>Lets Connect With Us</p>
             <a href="https://www.instagram.com/48intens" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-instagram icon"></i>
             </a>
-            <a href="https://discord.gg/48intenscommunity" target="_blank" rel="noopener noreferrer">
+            <a href="https://48intens.com/discord" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-discord icon"></i>
             </a>
             <a href="about.html" target="_blank" rel="noopener noreferrer">
@@ -349,11 +357,37 @@
         }, 3000)
         document.body.style.overflow = 'hidden';
 
+
+        // discord 
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const discordWidgetURL = 'https://discord.com/api/guilds/1185883650206744576/widget.json';
+
+            function fetchMemberCount() {
+                fetch(discordWidgetURL)
+                    .then(response => response.json())
+                    .then(data => {
+                        const memberCountElement = document.getElementById('memberCount');
+                        if (data && data.presence_count) {
+                            memberCountElement.innerText = `${data.presence_count} members`;
+                        } else {
+                            memberCountElement.innerText = "Unable to load member count";
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error fetching Discord member count:", error);
+                        document.getElementById('memberCount').innerText = "Unable to load member count";
+                    });
+            }
+
+            fetchMemberCount();
+        });
+
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-      </script>
+    </script>
 
 
 
