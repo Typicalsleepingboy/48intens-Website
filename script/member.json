@@ -1931,48 +1931,6 @@
         "idn_username": "jkt48_regie"
     },
     {
-        "_id": "65ce68e71dd7aa2c8c0ca604",
-        "name": "Reva Fidela",
-        "nicknames": [
-            "Adel",
-            "Dedel"
-        ],
-        "img": "https://static.showroom-live.com/image/room/cover/f459e9d740545298dcc1ac26e558b3c7a8a679a24369e1f86256b21c6faf4547_m.jpeg?v=1675091671",
-        "img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1709326092/wv0oymgzbgjek1di7nqh.jpg",
-        "url": "adel",
-        "description": "📌 Name: Reva Fidelia\r\n🎂 Birthday:14-July-2006\r\n🩸 Blood type: A\r\n🏹 Zodiac signs: Cancer \r\n📝 Hobby: Travelling, Drawing",
-        "group": "jkt48",
-        "height":"159cm",
-        "jikosokai": "Bagai kucing yang kalem, tapi selalu memikat hati kamu, hai aku Adel!",
-        "socials": [
-            {
-                "title": "Twitter",
-                "url": "https://twitter.com/R_AdelJKT48"
-            },
-            {
-                "title": "Instagram",
-                "url": "https://www.instagram.com/jkt48.adel/"
-            },
-            {
-                "title": "TikTok",
-                "url": "https://www.tiktok.com/@adeljkt48"
-            },
-            {
-                "title": "SHOWROOM",
-                "url": "https://www.showroom-live.com/JKT48_Adel"
-            },
-            {
-                "title": "IDN",
-                "url": "https://click.idn.media/VKUf?af_dp=idnapp://profile/9b41afb1-718c-405c-b192-5f3a878c3f17&af_web_dp=https://www.idn.app/jkt48_adel&c=web-android&deep_link_value=profile/9b41afb1-718c-405c-b192-5f3a878c3f17&pid=idnapp"
-            }
-        ],
-        "room_id": 318239,
-        "sr_exists": true,
-        "is_graduate": false,
-        "generation": "Gen 8",
-        "idn_username": "jkt48_adel"
-    },
-    {
         "_id": "65ce68ed1dd7aa2c8c0ca788",
         "name": "Ribka Budiman",
         "nicknames": [
