@@ -369,7 +369,7 @@
                     .then(data => {
                         const memberCountElement = document.getElementById('memberCount');
                         if (data && data.presence_count) {
-                            memberCountElement.innerText = `${data.presence_count} members`;
+                            memberCountElement.innerText = `${data.presence_count} members online`;
                         } else {
                             memberCountElement.innerText = "Unable to load member count";
                         }
