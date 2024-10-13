@@ -6,7 +6,7 @@
       "destination": "/welcome.html"
     },
     {
-      "source": "/:path(?!discord).*",
+      "source": "/:path*",
       "destination": "/:path*.html"
     }
   ],
