@@ -15,6 +15,36 @@
       "source": "/discord",
       "destination": "https://discord.gg/48intenscommunity",
       "permanent": true
-    }
+    },
+    {
+      "source": "/linktree",
+      "destination": "https://linktr.ee/48intens_",
+      "permanent": true
+    },
+    {
+      "source": "/instagram",
+      "destination": "https://www.instagram.com/48intens/",
+      "permanent": true
+    },
+    {
+      "source": "/youtube",
+      "destination": "https://www.youtube.com/@48intens",
+      "permanent": true
+    },
+        {
+      "source": "/tiktok",
+      "destination": "https://www.tiktok.com/@48intens",
+      "permanent": true
+    },
+    {
+      "source": "/twitter",
+      "destination": "https://x.com/48intens",
+      "permanent": true
+    },
+        {
+      "source": "/whatsapp",
+      "destination": "https://api.whatsapp.com/send/?phone=%2B6287745487605&text&type=phone_number&app_absent=0",
+      "permanent": true
+    },
   ]
 }
