@@ -45,6 +45,6 @@
       "source": "/whatsapp",
       "destination": "https://api.whatsapp.com/send/?phone=%2B6287745487605&text&type=phone_number&app_absent=0",
       "permanent": true
-    },
+    }
   ]
 }
