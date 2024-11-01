@@ -1,88 +1,287 @@
-const API_URL = 'https://api.crstlnz.my.id/api/jkt48_youtube';
-let isLoading = false;
-
-function formatViews(viewCount) {
-  if (viewCount >= 1000000) {
-    return (viewCount / 1000000).toFixed(1) + 'M views';
-  } else if (viewCount >= 1000) {
-    return (viewCount / 1000).toFixed(1) + 'K views';
-  }
-  return viewCount + ' views';
-}
-
-function formatDate(isoDate) {
-  const date = new Date(isoDate);
-  const now = new Date();
-  const diffTime = Math.abs(now - date);
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-  if (diffDays === 1) return 'Yesterday';
-  if (diffDays < 7) return `${diffDays} days ago`;
-  if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
-  if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
-  return `${Math.floor(diffDays / 365)} years ago`;
-}
-
-function createVideoCard(video) {
-  const card = document.createElement('div');
-  card.className = 'youtube-card';
-  card.onclick = () => {
-    window.open(video.url, '_blank');
-  };
-
-  card.innerHTML = `
-      <div class="thumbnail-container">
-          <img src="${video.thumbnails.high.url}" alt="${video.title}">
-      </div>
-      <div class="profile-container">
-          <img src="${video.profilePict.medium.url}" alt="${video.channelTitle}">
-          <h3 class="video-title">${video.title}</h3>
-      </div>
-      <div class="video-content">
-          <h3 class="channel-title">${video.channelTitle}</h3>
-          <div class="video-info">
-              <span class="video-views">${video.statistics.viewCount} Views</span> 
-          </div>
-      </div>
-  `;
-
-  return card;
-}
-
-async function fetchVideos() {
-  if (isLoading) return;
-  isLoading = true;
-
-  const loadingDiv = document.getElementById('loading');
-  loadingDiv.style.display = 'block';
-
-  try {
-    const response = await fetch(`${API_URL}`);
-    const data = await response.json();
-
-    if (data.error) {
-      throw new Error(data.error.message);
+const _0x3de0d6 = _0x32d4;
+(function (_0x4f3a40, _0x4eb128) {
+    const _0x1fa8e2 = _0x32d4, _0x220095 = _0x4f3a40();
+    while (!![]) {
+        try {
+            const _0x4aa60f = parseInt(_0x1fa8e2(0x158)) / (-0x1 * 0x5f + 0xe11 * 0x1 + -0xdb1) + parseInt(_0x1fa8e2(0x159)) / (-0x1 * -0x796 + -0x16 * -0x3d + 0x446 * -0x3) * (-parseInt(_0x1fa8e2(0x16b)) / (0x1a05 * 0x1 + -0x13d + -0x18c5)) + parseInt(_0x1fa8e2(0x1a2)) / (0x1c44 + 0x1e18 + -0x3a58) * (-parseInt(_0x1fa8e2(0x18b)) / (0x2342 + 0x670 + -0x29ad)) + parseInt(_0x1fa8e2(0x15b)) / (-0x1772 * -0x1 + -0x1d0e + 0x5a2) * (-parseInt(_0x1fa8e2(0x12a)) / (-0x435 + 0x6d1 * -0x1 + -0x45 * -0x29)) + parseInt(_0x1fa8e2(0x183)) / (-0x1fba + 0xd30 + 0x1292 * 0x1) * (parseInt(_0x1fa8e2(0x187)) / (-0x23df + -0x8c9 + 0x2cb1)) + -parseInt(_0x1fa8e2(0x144)) / (0x14f8 + 0xbbf + -0x1 * 0x20ad) + parseInt(_0x1fa8e2(0x19e)) / (-0x1 * 0x1567 + -0x21fd + 0x376f);
+            if (_0x4aa60f === _0x4eb128)
+                break;
+            else
+                _0x220095['push'](_0x220095['shift']());
+        } catch (_0xe1b624) {
+            _0x220095['push'](_0x220095['shift']());
+        }
     }
-
-    const container = document.getElementById('ytupcoming');
-
-    const limitedData = data.slice(0, 4);
-
-    limitedData.forEach(video => {
-      const card = createVideoCard(video);
-      container.appendChild(card);
-    });
-
-  } catch (error) {
-    console.error('Error fetching videos:', error);
-    const container = document.getElementById('ytupcoming');
-    container.innerHTML += `<div class="error">Sorry error loading youtube 😭</div>`;
-  } finally {
-    isLoading = false;
-    loadingDiv.style.display = 'none';
-  }
+}(_0x4048, -0x13bebd + 0x15b93b + 0x13 * 0x9725));
+const API_URL = _0x3de0d6(0x185) + _0x3de0d6(0x191) + _0x3de0d6(0x149) + _0x3de0d6(0x174) + _0x3de0d6(0x1a6);
+let isLoading = ![];
+function formatViews(_0xf7f3ac) {
+    const _0x380eac = _0x3de0d6, _0x5bf49f = {
+            'nzVHp': function (_0x385d30, _0x25ff6c) {
+                return _0x385d30 >= _0x25ff6c;
+            },
+            'NtITn': function (_0xf7c57f, _0x50b576) {
+                return _0xf7c57f + _0x50b576;
+            },
+            'OrOFL': function (_0xa0bf6b, _0x1be5f1) {
+                return _0xa0bf6b / _0x1be5f1;
+            },
+            'vsKfl': _0x380eac(0x14e),
+            'XDQzH': function (_0x39a686, _0x169fc8) {
+                return _0x39a686 >= _0x169fc8;
+            },
+            'oafyH': _0x380eac(0x189),
+            'AEdTg': function (_0x2a1cf9, _0x44b574) {
+                return _0x2a1cf9 + _0x44b574;
+            },
+            'rsOdK': _0x380eac(0x12d)
+        };
+    if (_0x5bf49f[_0x380eac(0x148)](_0xf7f3ac, 0x75ab + 0x1170bf + -0x1d66 * 0x17))
+        return _0x5bf49f[_0x380eac(0x178)](_0x5bf49f[_0x380eac(0x14b)](_0xf7f3ac, 0x68802 + -0xb6 * -0x2a24 + -0x153b5a)[_0x380eac(0x18f)](-0x12f4 + 0xfc1 + 0x334), _0x5bf49f[_0x380eac(0x153)]);
+    else {
+        if (_0x5bf49f[_0x380eac(0x16a)](_0xf7f3ac, 0xe3c + 0x26e4 + -0x12 * 0x2bc))
+            return _0x5bf49f[_0x380eac(0x178)](_0x5bf49f[_0x380eac(0x14b)](_0xf7f3ac, 0x49 * -0x5 + 0x26d3 + -0x217e)[_0x380eac(0x18f)](0x3 * -0x179 + 0xb9 * -0x20 + 0x29 * 0xac), _0x5bf49f[_0x380eac(0x16d)]);
+    }
+    return _0x5bf49f[_0x380eac(0x1a4)](_0xf7f3ac, _0x5bf49f[_0x380eac(0x140)]);
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  fetchVideos();
+function formatDate(_0x22cb5a) {
+    const _0x130884 = _0x3de0d6, _0x394ce8 = {
+            'yPMQF': function (_0x52c442, _0xd6162f) {
+                return _0x52c442 - _0xd6162f;
+            },
+            'NGjwW': function (_0x2bad62, _0x1f1251) {
+                return _0x2bad62 / _0x1f1251;
+            },
+            'tkJxB': function (_0x492bbb, _0x855203) {
+                return _0x492bbb * _0x855203;
+            },
+            'XGyQZ': function (_0x5d8231, _0x1a0354) {
+                return _0x5d8231 === _0x1a0354;
+            },
+            'BJmvy': _0x130884(0x1a9),
+            'IbsYj': function (_0x2954c5, _0x29fc7d) {
+                return _0x2954c5 < _0x29fc7d;
+            },
+            'Alcgv': function (_0x77ccc9, _0x369476) {
+                return _0x77ccc9 / _0x369476;
+            },
+            'dRuDr': function (_0x45dabb, _0x2d728a) {
+                return _0x45dabb / _0x2d728a;
+            },
+            'kSswm': function (_0x119277, _0x3084e7) {
+                return _0x119277 / _0x3084e7;
+            }
+        }, _0x44b5a2 = new Date(_0x22cb5a), _0x530f60 = new Date(), _0x4603d6 = Math[_0x130884(0x146)](_0x394ce8[_0x130884(0x179)](_0x530f60, _0x44b5a2)), _0x1620dd = Math[_0x130884(0x132)](_0x394ce8[_0x130884(0x19c)](_0x4603d6, _0x394ce8[_0x130884(0x14a)](_0x394ce8[_0x130884(0x14a)](_0x394ce8[_0x130884(0x14a)](-0x4c * -0x11 + 0x223 + 0x1 * -0x347, 0x199 * -0xc + 0x1ce2 * -0x1 + 0x304a), 0x1 * -0x1933 + 0x1 * -0x24e4 + -0x3e53 * -0x1), 0x218 + 0x82a + -0x515 * 0x2)));
+    if (_0x394ce8[_0x130884(0x13d)](_0x1620dd, -0x9 + -0x217 * -0x11 + -0x237d))
+        return _0x394ce8[_0x130884(0x13c)];
+    if (_0x394ce8[_0x130884(0x188)](_0x1620dd, 0x1c8d * 0x1 + -0x59 * -0xb + 0xd * -0x27d))
+        return _0x1620dd + _0x130884(0x139);
+    if (_0x394ce8[_0x130884(0x188)](_0x1620dd, -0x58f + -0x1a57 + 0x3 * 0xaac))
+        return Math[_0x130884(0x175)](_0x394ce8[_0x130884(0x12e)](_0x1620dd, 0x1 * 0xadc + -0x727 * -0x4 + -0x2771)) + _0x130884(0x14f);
+    if (_0x394ce8[_0x130884(0x188)](_0x1620dd, -0x3f * 0x65 + 0x1 * -0x99d + 0x23e5))
+        return Math[_0x130884(0x175)](_0x394ce8[_0x130884(0x129)](_0x1620dd, 0x27 * 0x26 + 0x2341 + -0x28ed * 0x1)) + (_0x130884(0x15d) + 'o');
+    return Math[_0x130884(0x175)](_0x394ce8[_0x130884(0x17b)](_0x1620dd, -0x41b * 0x5 + 0x780 + 0xe74)) + _0x130884(0x164);
+}
+function createVideoCard(_0x58e2be) {
+    const _0x593622 = _0x3de0d6, _0x3745fa = {
+            'qeKLB': _0x593622(0x197),
+            'XNNLW': _0x593622(0x15c),
+            'CwOdB': _0x593622(0x1ad) + 'rd'
+        }, _0x26eb68 = document[_0x593622(0x166) + _0x593622(0x156)](_0x3745fa[_0x593622(0x1a0)]);
+    return _0x26eb68[_0x593622(0x173)] = _0x3745fa[_0x593622(0x13a)], _0x26eb68[_0x593622(0x180)] = () => {
+        const _0x249374 = _0x593622;
+        window[_0x249374(0x15e)](_0x58e2be[_0x249374(0x145)], _0x3745fa[_0x249374(0x17f)]);
+    }, _0x26eb68[_0x593622(0x1aa)] = _0x593622(0x17a) + _0x593622(0x190) + _0x593622(0x161) + _0x593622(0x135) + _0x593622(0x134) + _0x593622(0x1a1) + '\x22' + _0x58e2be[_0x593622(0x141)][_0x593622(0x196)][_0x593622(0x145)] + _0x593622(0x157) + _0x58e2be[_0x593622(0x131)] + (_0x593622(0x181) + _0x593622(0x150) + _0x593622(0x142) + _0x593622(0x1a3) + _0x593622(0x147) + _0x593622(0x19f) + _0x593622(0x186) + _0x593622(0x17e)) + _0x58e2be[_0x593622(0x194) + 't'][_0x593622(0x12c)][_0x593622(0x145)] + _0x593622(0x157) + _0x58e2be[_0x593622(0x13f) + 'le'] + (_0x593622(0x12f) + _0x593622(0x195) + _0x593622(0x133) + _0x593622(0x163)) + _0x58e2be[_0x593622(0x131)] + (_0x593622(0x177) + _0x593622(0x1a5) + _0x593622(0x143) + _0x593622(0x130) + _0x593622(0x1a8) + _0x593622(0x12f) + _0x593622(0x195) + _0x593622(0x18a) + _0x593622(0x127)) + _0x58e2be[_0x593622(0x13f) + 'le'] + (_0x593622(0x177) + _0x593622(0x14d) + _0x593622(0x19b) + _0x593622(0x16c) + _0x593622(0x134) + _0x593622(0x167) + _0x593622(0x19b) + _0x593622(0x15a) + '>') + _0x58e2be[_0x593622(0x18d)][_0x593622(0x138)] + (_0x593622(0x19d) + _0x593622(0x13b) + _0x593622(0x165) + _0x593622(0x13e) + _0x593622(0x128)), _0x26eb68;
+}
+async function fetchVideos() {
+    const _0x226e4f = _0x3de0d6, _0x29ae26 = {
+            'UxYeH': function (_0x490cc4, _0xdf848a) {
+                return _0x490cc4(_0xdf848a);
+            },
+            'JKbcB': _0x226e4f(0x155),
+            'FdthR': _0x226e4f(0x18e),
+            'VlKjc': _0x226e4f(0x136),
+            'uiDeG': _0x226e4f(0x176) + _0x226e4f(0x154) + 's:',
+            'tjdgH': _0x226e4f(0x169)
+        };
+    if (isLoading)
+        return;
+    isLoading = !![];
+    const _0x24f2d9 = document[_0x226e4f(0x199) + _0x226e4f(0x16f)](_0x29ae26[_0x226e4f(0x14c)]);
+    _0x24f2d9[_0x226e4f(0x182)][_0x226e4f(0x12b)] = _0x29ae26[_0x226e4f(0x184)];
+    try {
+        const _0x3e7df1 = await _0x29ae26[_0x226e4f(0x152)](fetch, '' + API_URL), _0x4c5225 = await _0x3e7df1[_0x226e4f(0x16e)]();
+        if (_0x4c5225[_0x226e4f(0x151)])
+            throw new Error(_0x4c5225[_0x226e4f(0x151)][_0x226e4f(0x168)]);
+        const _0x3bef0e = document[_0x226e4f(0x199) + _0x226e4f(0x16f)](_0x29ae26[_0x226e4f(0x193)]), _0x161ed1 = _0x4c5225[_0x226e4f(0x171)](-0x269 * 0xd + 0xc75 + 0x12e0, -0x1 * 0x2342 + -0x2c5 * -0x1 + 0x2081);
+        _0x161ed1[_0x226e4f(0x192)](_0xb9f5c8 => {
+            const _0x2066d0 = _0x226e4f, _0x224f72 = _0x29ae26[_0x2066d0(0x152)](createVideoCard, _0xb9f5c8);
+            _0x3bef0e[_0x2066d0(0x19a) + 'd'](_0x224f72);
+        });
+    } catch (_0x1297c4) {
+        console[_0x226e4f(0x151)](_0x29ae26[_0x226e4f(0x1a7)], _0x1297c4);
+        const _0x4ef6bf = document[_0x226e4f(0x199) + _0x226e4f(0x16f)](_0x29ae26[_0x226e4f(0x193)]);
+        _0x4ef6bf[_0x226e4f(0x1aa)] += _0x226e4f(0x18c) + _0x226e4f(0x170) + _0x226e4f(0x137) + _0x226e4f(0x1ac) + _0x226e4f(0x1ab) + _0x226e4f(0x198);
+    } finally {
+        isLoading = ![], _0x24f2d9[_0x226e4f(0x182)][_0x226e4f(0x12b)] = _0x29ae26[_0x226e4f(0x17d)];
+    }
+}
+function _0x32d4(_0x4a7df1, _0x1060b2) {
+    const _0x178c09 = _0x4048();
+    return _0x32d4 = function (_0x5d9b76, _0x45263f) {
+        _0x5d9b76 = _0x5d9b76 - (0x3 * -0x938 + -0x2 * 0x37a + -0x1 * -0x23c3);
+        let _0x38d014 = _0x178c09[_0x5d9b76];
+        return _0x38d014;
+    }, _0x32d4(_0x4a7df1, _0x1060b2);
+}
+document[_0x3de0d6(0x17c) + _0x3de0d6(0x172)](_0x3de0d6(0x160) + _0x3de0d6(0x15f), () => {
+    const _0x56eadc = _0x3de0d6, _0xd969c = {
+            'Kpdas': function (_0x55e738) {
+                return _0x55e738();
+            }
+        };
+    _0xd969c[_0x56eadc(0x162)](fetchVideos);
 });
+function _0x4048() {
+    const _0x5650f8 = [
+        'M\x20views',
+        '\x20weeks\x20ago',
+        '/div>\x0a\x20\x20\x20\x20',
+        'error',
+        'UxYeH',
+        'vsKfl',
+        'hing\x20video',
+        'loading',
+        'ent',
+        '\x22\x20alt=\x22',
+        '317075NXnlMl',
+        '2yfeaeX',
+        'deo-views\x22',
+        '3030lGYNte',
+        'div',
+        '\x20months\x20ag',
+        'open',
+        'Loaded',
+        'DOMContent',
+        'humbnail-c',
+        'Kpdas',
+        'title\x22>',
+        '\x20years\x20ago',
+        '\x20\x20\x20\x20\x20</div',
+        'createElem',
+        '\x20\x20\x20\x20\x20<span',
+        'message',
+        'none',
+        'XDQzH',
+        '3842700WvGkgj',
+        'deo-info\x22>',
+        'oafyH',
+        'json',
+        'ById',
+        '=\x22error\x22>S',
+        'slice',
+        'stener',
+        'className',
+        'jkt48_yout',
+        'floor',
+        'Error\x20fetc',
+        '</h3>\x0a\x20\x20\x20\x20',
+        'NtITn',
+        'yPMQF',
+        '\x0a\x20\x20\x20\x20\x20\x20<di',
+        'kSswm',
+        'addEventLi',
+        'tjdgH',
+        'rc=\x22',
+        'qeKLB',
+        'onclick',
+        '\x22>\x0a\x20\x20\x20\x20\x20\x20<',
+        'style',
+        '16SWxCEn',
+        'FdthR',
+        'https://ap',
+        '\x20\x20\x20\x20<img\x20s',
+        '6959052rNKrwj',
+        'IbsYj',
+        'K\x20views',
+        'ss=\x22channe',
+        '892390aRyHvw',
+        '<div\x20class',
+        'statistics',
+        'block',
+        'toFixed',
+        'v\x20class=\x22t',
+        'i.crstlnz.',
+        'forEach',
+        'VlKjc',
+        'profilePic',
+        '\x20\x20\x20<h3\x20cla',
+        'high',
+        '_blank',
+        'div>',
+        'getElement',
+        'appendChil',
+        '\x20class=\x22vi',
+        'NGjwW',
+        '\x20Views</sp',
+        '20109353SQZPLP',
+        'r\x22>\x0a\x20\x20\x20\x20\x20\x20',
+        'XNNLW',
+        '\x20<img\x20src=',
+        '4DhJqtU',
+        'ss=\x22profil',
+        'AEdTg',
+        '\x20\x20</div>\x0a\x20',
+        'ube',
+        'uiDeG',
+        'eo-content',
+        'Yesterday',
+        'innerHTML',
+        'outube\x20😭</',
+        '\x20loading\x20y',
+        'youtube-ca',
+        'l-title\x22>',
+        'div>\x0a\x20\x20',
+        'dRuDr',
+        '13839hggKDY',
+        'display',
+        'medium',
+        '\x20views',
+        'Alcgv',
+        '\x22>\x0a\x20\x20\x20\x20\x20\x20\x20',
+        'class=\x22vid',
+        'title',
+        'ceil',
+        'ss=\x22video-',
+        '\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20',
+        'ontainer\x22>',
+        'ytupcoming',
+        'orry\x20error',
+        'viewCount',
+        '\x20days\x20ago',
+        'CwOdB',
+        'an>\x20\x0a\x20\x20\x20\x20\x20',
+        'BJmvy',
+        'XGyQZ',
+        '>\x0a\x20\x20\x20\x20\x20\x20</',
+        'channelTit',
+        'rsOdK',
+        'thumbnails',
+        '\x20\x20<div\x20cla',
+        '\x20\x20\x20\x20\x20<div\x20',
+        '3690620QemSqw',
+        'url',
+        'abs',
+        'e-containe',
+        'nzVHp',
+        'my.id/api/',
+        'tkJxB',
+        'OrOFL',
+        'JKbcB',
+        '\x20\x20\x20\x20\x20\x20<div'
+    ];
+    _0x4048 = function () {
+        return _0x5650f8;
+    };
+    return _0x4048();
+}
