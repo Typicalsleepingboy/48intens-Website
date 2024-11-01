@@ -42,6 +42,84 @@ body {
 	width: 100px;
 }
 
+/* Container styles */
+.youtube-card-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+}
+
+.youtube-card {
+	border-radius: 15px;
+	width: 20%;
+	padding: 10px;
+	background-color: #4b5f83;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+
+.youtube-card:hover {
+	transform: scale(1.05);
+}
+
+/* Thumbnail */
+.thumbnail-container {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16/9;
+	overflow: hidden;
+}
+
+.thumbnail-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+
+/* Profile and channel title */
+.profile-container {
+	display: flex;
+	align-items: center;
+	padding: 12px 16px;
+}
+
+.profile-container img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.channel-title {
+	font-size: 16px;
+	font-weight: 100;
+	color: #ffffff;
+}
+
+/* Video content */
+.video-content {
+	padding: 10px;
+}
+
+.video-title {
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+	margin: 0 5 8px;
+}
+
+
+.video-views {
+	margin-right: 8px;
+	font-weight: 100;
+}
+
+
+
 .label {
 	font-size: 20px;
 	font-weight: bold;
@@ -614,11 +692,11 @@ header ul li {
 }
 
 header ul li a {
-	display: inline-block; 
-	padding: 20px 15px; 
-	text-decoration: none; 
+	display: inline-block;
+	padding: 20px 15px;
+	text-decoration: none;
 	border-radius: 5px;
-	transition: background-color 0.3s, color 0.3s; 
+	transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -1099,8 +1177,8 @@ img {
 	display: flex;
 	margin-bottom: 10px;
 	margin-top: 10px;
-  flex-direction: column;
-  align-items: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 .rowdmember2 {
@@ -1254,7 +1332,7 @@ img {
 	flex-wrap: wrap;
 	justify-content: start;
 	align-items: flex-start;
-	gap: 30px;
+	gap: 70px;
 	margin-left: 90px;
 }
 
@@ -1464,18 +1542,18 @@ footer a:hover {
 
 
 .search-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .search-container input[type="text"] {
-    padding: 8px;
-		background-color: #4b5f83;
-    width: 250px;
-    border-radius: 10px;
-		color: #ffffff;
-    border: 50px;
+	padding: 8px;
+	background-color: #4b5f83;
+	width: 250px;
+	border-radius: 10px;
+	color: #ffffff;
+	border: 50px;
 }
 
 
@@ -1503,7 +1581,7 @@ footer a:hover {
 		justify-content: center;
 		display: flex;
 		flex-direction: column;
-    align-items: center;
+		align-items: center;
 		flex-wrap: wrap;
 		overflow: hidden;
 	}
@@ -1529,27 +1607,27 @@ footer a:hover {
 
 	header ul li a {
 		display: block;
-		padding: 5px; 
+		padding: 5px;
 		text-align: center;
 		font-size: 16px;
 		margin: 0;
 	}
-	
+
 	.search-container {
-    display: flex;
-    flex-direction: column;
+		display: flex;
+		flex-direction: column;
 		align-items: center;
-    justify-content: center;
-}
+		justify-content: center;
+	}
 
 	.search-container input[type="text"] {
-    padding: 8px;
-    width: 200px;
+		padding: 8px;
+		width: 200px;
 		margin-top: 10px;
-    border-radius: 4px;
+		border-radius: 4px;
 		color: #000000;
-    border: 1px solid #ccc;
-}
+		border: 1px solid #ccc;
+	}
 
 
 	.banner {
@@ -1572,7 +1650,7 @@ footer a:hover {
 		object-fit: cover;
 	}
 
-	
+
 	.row3 h3 {
 		border-radius: 10px;
 		width: 80px;
@@ -1597,7 +1675,7 @@ footer a:hover {
 		width: 200px;
 		margin: 4px;
 	}
-	
+
 	.sectionnn a {
 		font-size: 12px;
 	}
@@ -1639,7 +1717,7 @@ footer a:hover {
 		margin-left: 20px;
 		color: #fff;
 	}
-	
+
 
 	.row-live h3 {
 		font-size: 14px;
@@ -1652,17 +1730,17 @@ footer a:hover {
 
 	.row2 {
 		display: flex;
-    flex-direction: column;
-    align-items: center;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.rowdmember2 {
 		display: flex;
-    flex-direction: column;
-    align-items: center;
+		flex-direction: column;
+		align-items: center;
 	}
 
-	.teks{
+	.teks {
 		margin-left: 20px;
 		width: 300px;
 	}
@@ -1754,7 +1832,7 @@ footer a:hover {
 		align-items: center;
 	}
 
-	.flex-container-member{
+	.flex-container-member {
 		flex-direction: column;
 		align-items: center;
 	}
@@ -1843,9 +1921,10 @@ footer a:hover {
 		font-size: 16px;
 	}
 
-	.card-grad{
+	.card-grad {
 		margin-right: 40px;
 	}
+
 	.member-card p {
 		font-size: 15px;
 	}
@@ -1911,7 +1990,7 @@ footer a:hover {
 		max-width: 540px;
 		object-fit: cover;
 	}
-	
+
 
 	.card-nowlive {
 		width: 420px;
@@ -1967,1064 +2046,53 @@ footer a:hover {
 	.item h4 {
 		font-size: 14px;
 	}
+
+	/* Responsive styles for mobile devices */
+	@media (max-width: 768px) {
+		.youtube-card {
+			width: 45%;
+			/* Adjust card width to fit more cards in smaller screens */
+		}
+
+		.channel-title,
+		.video-title {
+			font-size: 14px;
+			/* Reduce font size for mobile */
+		}
+
+		.profile-container img {
+			width: 35px;
+			height: 35px;
+			/* Adjust profile image size */
+		}
+	}
+
+	@media (max-width: 480px) {
+		.youtube-card {
+			width: 90%;
+			/* Full-width cards for small mobile screens */
+			margin-bottom: 15px;
+		}
+
+
+
+		.thumbnail-container {
+			aspect-ratio: 16/9;
+			/* Adjust aspect ratio for smaller screens */
+		}
+
+		.channel-title,
+		.video-title {
+			font-size: 12px;
+			/* Further reduce font size for extra-small screens */
+		}
+
+		.profile-container {
+			padding: 8px 10px;
+		}
+
+		.video-content {
+			padding: 8px;
+		}
+	}
 }
-
-/* @media (min-width: 768px) and (max-width: 992px) {
-  header {
-    margin-top: 30px;
-    padding: 10px 0;
-    height: 85px;
-    width: 95%;
-  }
-
-  header h1 {
-    font-size: 12px;
-  }
-
-  header h1 a {
-    font-size: 28px;
-  }
-
-  .container {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-
-  .container-nav {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  header ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  header ul li {
-    margin-right: 10px;
-  }
-
-  header ul li a {
-    display: block;
-    width: 40px;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  .banner {
-    width: 100%;
-  }
-
-  .poster,
-  .poster-event,
-  .postermem {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .row3 img {
-    width: 100%;
-  }
-
-  .row6 img {
-    width: 30%;
-    height: 30%;
-  }
-
-  .row6 h1 {
-    font-size: 14px;
-  }
-
-  .row2 img,
-  .row-live img {
-    width: 30%;
-    height: 30%;
-    border-radius: 10px;
-  }
-
-  .row-live h3 {
-    font-size: 14px;
-    bottom: 20px;
-  }
-
-  .row2 h1 {
-    font-size: 20px;
-  }
-
-  .twitter-timeline {
-    display: none;
-  }
-
-  .slideshow-image {
-    width: 110%;
-    height: 90%;
-  }
-
-  .slideshow-image img {
-    width: 90%;
-    height: 120%;
-    box-shadow: none;
-    margin-right: 99px;
-    border-radius: 10px;
-  }
-
-  .dot {
-    margin-top: 30px;
-    width: 6px;
-    height: 6px;
-  }
-
-  .slideshow-container {
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  .card-up {
-    width: 640px;
-    height: auto;
-    justify-content: center;
-    margin-right: 20px;
-  }
-
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 355px;
-    text-align: left;
-    margin-left: 14px;
-  }
-
-  .btnn h1 {
-    width: 110px;
-    padding: 2px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .card-up h3 {
-    font-size: 16px;
-  }
-
-  .box {
-    width: 95%;
-  }
-
-  .icon i {
-    font-size: 24px;
-  }
-
-  .box-event {
-    width: 95%;
-  }
-
-  .link-item p {
-    font-size: 15px;
-  }
-
-  .box-news {
-    width: 95%;
-  }
-
-  .box-special {
-    width: 95%;
-    height: 220px;
-  }
-
-  .flex-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flex-container-record-birnetx {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flex-container-base {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  * {
-    font-size: 15px;
-    text-align: left;
-  }
-
-  .card {
-    margin-left: 13px;
-    justify-content: start;
-  }
-
-  .card img {
-    width: 100px;
-  }
-
-	.item img {
-    width: 100px;
-  }
-
-
-  .card h3,
-  .card p {
-    width: 120px;
-    font-size: 14px;
-  }
-
-  .birthnext {
-    margin-left: 13px;
-    justify-content: start;
-  }
-
-
-  .social-icons {
-    text-align: center;
-  }
-
-  .social-icons,
-  .social-icons p {
-    text-align: center;
-    font-size: 12px;
-  }
-
-  footer a {
-    text-align: center;
-    font-size: 12px;
-  }
-
-  footer {
-    font-size: 12px;
-  }
-
-  .scroll-to-top-btn {
-    bottom: 40px;
-    right: 30px;
-  }
-
-  .scroll-to-top-btn button {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .card-grad h2 {
-    font-size: 16px;
-    width: 200px;
-  }
-
-  .card-grad p {
-    font-size: 16px;
-  }
-
-  .member-card p {
-    font-size: 15px;
-  }
-
-  .section a {
-    font-size: 14px;
-  }
-
-  .box-live {
-    width: 95%;
-  }
-
-  .postermemlive {
-    width: 95%;
-  }
-
-  .btn {
-    font-size: 14px;
-  }
-
-  #noLiveMessage,
-  #noTheaterMessage {
-    font-size: 15px;
-  }
-
-  .col-lg-3 {
-    width: 20%;
-    padding: 4px;
-    margin-left: 7px;
-  }
-
-  .col-lg-3 img {
-    border-radius: 5px;
-  }
-
-  .icon {
-    font-size: 12px;
-  }
-
-  .card-nowlive-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-right: 20px;
-  }
-
-  .card-nowlive img {
-    margin-left: 25px;
-    width: 275px;
-    height: 170px;
-    max-width: 240px;
-    object-fit: cover;
-  }
-
-  .card-nowlive-up img {
-    margin-left: 25px;
-    width: 275px;
-    height: 170px;
-    max-width: 240px;
-    object-fit: cover;
-  }
-
-  .card-nowlive {
-    width: 400px;
-    margin-left: 20px;
-    height: 350px;
-  }
-
-  .card-title {
-    margin-top: 10px;
-    font-size: 15px;
-  }
-
-  .card-text {
-    font-size: 15px;
-  }
-
-  .pagination a {
-    border-radius: 7px;
-    padding: 2px 4px;
-  }
-
-  .item h5 {
-    font-size: 12px;
-    width: 90px;
-  }
-
-  .item h3 {
-    font-size: 12px;
-  }
-  .item h4 {
-    font-size: 12px;
-  }
-}
-
-
-@media (min-width: 992px) and (max-width: 1200px) {
-	header {
-    margin-top: 30px;
-    padding: 10px 0;
-    height: 85px;
-    width: 95%;
-  }
-
-  header h1 {
-    font-size: 12px;
-  }
-
-  header h1 a {
-    font-size: 28px;
-  }
-
-  .container {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-
-  .container-nav {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  header ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  header ul li {
-    margin-right: 10px;
-  }
-
-  header ul li a {
-    display: block;
-    width: 40px;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  .banner {
-    width: 100%;
-  }
-
-  .poster,
-  .poster-event,
-  .postermem {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .row3 img {
-    width: 100%;
-  }
-
-  .row6 img {
-    width: 30%;
-    height: 30%;
-  }
-
-  .row6 h1 {
-    font-size: 14px;
-  }
-
-  .row2 img,
-  .row-live img {
-    width: 30%;
-    height: 30%;
-    border-radius: 10px;
-  }
-
-  .row-live h3 {
-    font-size: 14px;
-    bottom: 20px;
-  }
-
-  .row2 h1 {
-    font-size: 20px;
-  }
-
-  .twitter-timeline {
-    display: none;
-  }
-
-  .slideshow-image {
-    width: 110%;
-    height: 90%;
-  }
-
-  .slideshow-image img {
-    width: 90%;
-    height: 120%;
-    box-shadow: none;
-    margin-right: 99px;
-    border-radius: 10px;
-  }
-
-  .dot {
-    margin-top: 30px;
-    width: 6px;
-    height: 6px;
-  }
-
-  .slideshow-container {
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  .card-up {
-    width: 640px;
-    height: auto;
-    justify-content: center;
-    margin-right: 20px;
-  }
-
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 355px;
-    text-align: left;
-    margin-left: 14px;
-  }
-
-  .btnn h1 {
-    width: 110px;
-    padding: 2px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .card-up h3 {
-    font-size: 16px;
-  }
-
-  .box {
-    width: 95%;
-  }
-
-  .icon i {
-    font-size: 24px;
-  }
-
-  .box-event {
-    width: 95%;
-  }
-
-  .link-item p {
-    font-size: 15px;
-  }
-
-  .box-news {
-    width: 95%;
-  }
-
-  .box-special {
-    width: 95%;
-    height: 220px;
-  }
-
-  .flex-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flex-container-record-birnetx {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flex-container-base {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  * {
-    font-size: 15px;
-    text-align: left;
-  }
-
-  .card {
-    margin-left: 13px;
-    justify-content: start;
-  }
-
-  .card img {
-    width: 100px;
-  }
-
-	.item img {
-    width: 100px;
-  }
-
-
-  .card h3,
-  .card p {
-    width: 120px;
-    font-size: 14px;
-  }
-
-  .birthnext {
-    margin-left: 13px;
-    justify-content: start;
-  }
-
-
-  .social-icons {
-    text-align: center;
-  }
-
-  .social-icons,
-  .social-icons p {
-    text-align: center;
-    font-size: 12px;
-  }
-
-  footer a {
-    text-align: center;
-    font-size: 12px;
-  }
-
-  footer {
-    font-size: 12px;
-  }
-
-  .scroll-to-top-btn {
-    bottom: 40px;
-    right: 30px;
-  }
-
-  .scroll-to-top-btn button {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .card-grad h2 {
-    font-size: 16px;
-    width: 200px;
-  }
-
-  .card-grad p {
-    font-size: 16px;
-  }
-
-  .member-card p {
-    font-size: 15px;
-  }
-
-  .section a {
-    font-size: 14px;
-  }
-
-  .box-live {
-    width: 95%;
-  }
-
-  .postermemlive {
-    width: 95%;
-  }
-
-  .btn {
-    font-size: 14px;
-  }
-
-  #noLiveMessage,
-  #noTheaterMessage {
-    font-size: 15px;
-  }
-
-  .col-lg-3 {
-    width: 20%;
-    padding: 4px;
-    margin-left: 7px;
-  }
-
-  .col-lg-3 img {
-    border-radius: 5px;
-  }
-
-  .icon {
-    font-size: 12px;
-  }
-
-  .card-nowlive-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-right: 20px;
-  }
-
-  .card-nowlive img {
-    margin-left: 25px;
-    width: 275px;
-    height: 170px;
-    max-width: 240px;
-    object-fit: cover;
-  }
-
-  .card-nowlive-up img {
-    margin-left: 25px;
-    width: 275px;
-    height: 170px;
-    max-width: 240px;
-    object-fit: cover;
-  }
-
-  .card-nowlive {
-    width: 400px;
-    margin-left: 20px;
-    height: 350px;
-  }
-
-  .card-title {
-    margin-top: 10px;
-    font-size: 15px;
-  }
-
-  .card-text {
-    font-size: 15px;
-  }
-
-  .pagination a {
-    border-radius: 7px;
-    padding: 2px 4px;
-  }
-
-  .item h5 {
-    font-size: 12px;
-    width: 90px;
-  }
-
-  .item h3 {
-    font-size: 12px;
-  }
-  .item h4 {
-    font-size: 12px;
-  }
-
-}
-@media (min-width: 1200px) {
-  header {
-    margin-top: 30px;
-    padding: 10px 0;
-    height: 85px;
-    width: 95%;
-  }
-
-  header h1 {
-    font-size: 12px;
-  }
-
-  header h1 a {
-    font-size: 28px;
-  }
-
-  .container {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-
-  .container-nav {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  header ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-
-  header ul li {
-    margin-right: 10px;
-  }
-
-  header ul li a {
-    display: block;
-    width: 40px;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  .banner {
-    width: 100%;
-  }
-
-  .poster,
-  .poster-event,
-  .postermem {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .row3 img {
-    width: 100%;
-  }
-
-  .row6 img {
-    width: 30%;
-    height: 30%;
-  }
-
-  .row6 h1 {
-    font-size: 14px;
-  }
-
-  .row2 img,
-  .row-live img {
-    width: 30%;
-    height: 30%;
-    border-radius: 10px;
-  }
-
-  .row-live h3 {
-    font-size: 14px;
-    bottom: 20px;
-  }
-
-  .row2 h1 {
-    font-size: 20px;
-  }
-
-  .twitter-timeline {
-    display: none;
-  }
-
-  .slideshow-image {
-    width: 110%;
-    height: 90%;
-  }
-
-  .slideshow-image img {
-    width: 90%;
-    height: 120%;
-    box-shadow: none;
-    margin-right: 99px;
-    border-radius: 10px;
-  }
-
-  .dot {
-    margin-top: 30px;
-    width: 6px;
-    height: 6px;
-  }
-
-  .slideshow-container {
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  .card-up {
-    width: 640px;
-    height: auto;
-    justify-content: center;
-    margin-right: 20px;
-  }
-
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 355px;
-    text-align: left;
-    margin-left: 14px;
-  }
-
-  .btnn h1 {
-    width: 110px;
-    padding: 2px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .card-up h3 {
-    font-size: 16px;
-  }
-
-  .box {
-    width: 95%;
-  }
-
-  .icon i {
-    font-size: 24px;
-  }
-
-  .box-event {
-    width: 95%;
-  }
-
-  .link-item p {
-    font-size: 15px;
-  }
-
-  .box-news {
-    width: 95%;
-  }
-
-  .box-special {
-    width: 95%;
-    height: 220px;
-  }
-
-  .flex-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flex-container-record-birnetx {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flex-container-base {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  * {
-    font-size: 15px;
-    text-align: left;
-  }
-
-  .card {
-    margin-left: 13px;
-    justify-content: start;
-  }
-
-  .card img {
-    width: 100px;
-  }
-
-	.item img {
-    width: 100px;
-  }
-
-
-  .card h3,
-  .card p {
-    width: 120px;
-    font-size: 14px;
-  }
-
-  .birthnext {
-    margin-left: 13px;
-    justify-content: start;
-  }
-
-
-  .social-icons {
-    text-align: center;
-  }
-
-  .social-icons,
-  .social-icons p {
-    text-align: center;
-    font-size: 12px;
-  }
-
-  footer a {
-    text-align: center;
-    font-size: 12px;
-  }
-
-  footer {
-    font-size: 12px;
-  }
-
-  .scroll-to-top-btn {
-    bottom: 40px;
-    right: 30px;
-  }
-
-  .scroll-to-top-btn button {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .card-grad h2 {
-    font-size: 16px;
-    width: 200px;
-  }
-
-  .card-grad p {
-    font-size: 16px;
-  }
-
-  .member-card p {
-    font-size: 15px;
-  }
-
-  .section a {
-    font-size: 14px;
-  }
-
-  .box-live {
-    width: 95%;
-  }
-
-  .postermemlive {
-    width: 95%;
-  }
-
-  .btn {
-    font-size: 14px;
-  }
-
-  #noLiveMessage,
-  #noTheaterMessage {
-    font-size: 15px;
-  }
-
-  .col-lg-3 {
-    width: 20%;
-    padding: 4px;
-    margin-left: 7px;
-  }
-
-  .col-lg-3 img {
-    border-radius: 5px;
-  }
-
-  .icon {
-    font-size: 12px;
-  }
-
-  .card-nowlive-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-right: 20px;
-  }
-
-  .card-nowlive img {
-    margin-left: 25px;
-    width: 275px;
-    height: 170px;
-    max-width: 240px;
-    object-fit: cover;
-  }
-
-  .card-nowlive-up img {
-    margin-left: 25px;
-    width: 275px;
-    height: 170px;
-    max-width: 240px;
-    object-fit: cover;
-  }
-
-  .card-nowlive {
-    width: 400px;
-    margin-left: 20px;
-    height: 350px;
-  }
-
-  .card-title {
-    margin-top: 10px;
-    font-size: 15px;
-  }
-
-  .card-text {
-    font-size: 15px;
-  }
-
-  .pagination a {
-    border-radius: 7px;
-    padding: 2px 4px;
-  }
-
-  .item h5 {
-    font-size: 14px;
-    width: 90px;
-  }
-
-  .item h3 {
-    font-size: 14px;
-  }
-  .item h4 {
-    font-size: 14px;
-  }
-} */
