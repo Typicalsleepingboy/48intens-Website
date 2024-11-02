@@ -405,7 +405,7 @@
                         document.getElementById('memberCount').innerText = "Unable to load member count";
                     });
             }
-
+            setInterval(fetchMemberCount, 5000);
             fetchMemberCount();
         });
 
