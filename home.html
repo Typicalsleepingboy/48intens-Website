@@ -7,7 +7,8 @@
     <title>48Intens Official</title>
     <link rel="stylesheet" href="./css/style.css" />
     <meta name="author" content="48Intens Official" />
-    <meta name="description" content="48Intens Official - 48Intens adalah fanbase besar dan aktif untuk JKT48 dengan lebih dari 45,000 member. Kami selalu memberikan informasi terbaru seputar JKT48 setiap hari, termasuk berita, event, dan masih banyak lagi." />
+    <meta name="description"
+        content="48Intens Official - 48Intens adalah fanbase besar dan aktif untuk JKT48 dengan lebih dari 45,000 member. Kami selalu memberikan informasi terbaru seputar JKT48 setiap hari, termasuk berita, event, dan masih banyak lagi." />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -33,14 +34,6 @@
     <div class="section">
         <div class="container">
             <div class="slideshow-container">
-                 <div class="slideshow-image">
-                    <a href="https://www.youtube.com/watch?v=taE4wnmDHhU"><img src="/assets/heading-bg7.jpg"
-                            alt="Slide 8" loading="lazy"></a>
-                </div>
-                 <div class="slideshow-image">
-                    <a href="https://widget.loket.com/widget/jkt48anniversarygensales"><img src="/assets/heading-bg8.jpg"
-                            alt="Slide 9" loading="lazy"></a>
-                </div>
                 <div class="slideshow-image">
                     <a href="https://www.youtube.com/watch?v=5cy3vDjTfFY"><img src="/assets/heading-bg.jpg"
                             alt="Slide 1" loading="lazy"></a>
@@ -120,317 +113,476 @@
     </div>
 
 
-    <div class="section">
-        <div class="container">
-            <div class="box">
-                <h1 class="titleup"><span class="icon"><i class="fas fa-theater-masks"></i></span> Upcoming Theater</h1>
-                <br>
-                <hr><br>
-                <p id="noTheaterMessage"></p>
-                <div data-aos="zoom-in" id="upcoming" class="card-container"></div>
-                <br>
-                <hr><br>
-            </div>
-        </div>
-    </div>
+    <!DOCTYPE html>
+    <html lang="id">
 
-    <div class="section">
-        <div class="container">
-            <div class="box">
-                <h1 class="titleup">
-                    <span class="icon"><i class="fab fa-youtube"></i></span> 
-                    Youtube JKT48
-                </h1>
-                <br>
-                <hr><br>
-                <div id="loading" class="loading">Loading videos...</div>
-                <div data-aos="zoom-in" id="ytupcoming" class="youtube-card-container"></div>
-                <br>
-                <hr><br>
-            </div>
-        </div>
-    </div>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JKT48 Information Page</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <!-- AOS Animation Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-    <div class="section">
-        <div class="container">
-            <div class="flex-container">
-                <div class="box-news">
-                    <h1 class="titleup"><span class="icon"><i class="fas fa-newspaper"></i></span> News</h1>
-                    <br />
-                    <hr />
-                    <div id="newsLimit"></div>
-                    <br />
-                    <a href="/news" class="btn">Cek lainnya</a><br />
-                </div>
-                <div class="box-event">
-                    <h1 class="titleup"><span class="icon"><i class="fas fa-calendar"></i></span> Event</h1>
-                    <br />
-                    <hr />
-                    <div id="eventList"></div>
-                    <br />
-                    <a href="/news" class="btn">Cek lainnya</a><br />
-                </div>
-                <div class="box-special">
-                    <h1 class="titleup"><span class="icon"><i class="fas fa-envelope"></i></span> Special Links</h1>
-                    <br />
-                    <hr />
-                    <div class="link-item">
-                        <a href="https://jkt48.com/theater/mvp?lang=id">⭐ JKT48 THEATER MVP</a>
-                    </div>
-                    <hr />
-                    <div class="link-item">
-                        <a href="https://jkt48.com/about/fanletter?lang=id">💌 FAN LETTER AND GIFT INFO</a>
-                    </div>
-                    <hr />
-                    <div class="link-item">
-                        <a href="https://jkt48.com/about/handshake?lang=id">🫱 YUK KITA HANDSHAKE</a>
-                    </div>
-                    <hr />
-                </div>
-            </div>
-        </div>
-    </div>
+    <body>
+        <div class="section">
+            <div class="container">
+                <div class="box">
+                    <h1 class="titleup">
+                        <span class="icon"><i class="fas fa-star"></i></span>
+                        APA ITU JKT48?
+                    </h1>
+                    <br>
+                    <hr><br>
+                        <p>
+                            <strong>JKT48</strong> (kependekan dari
+                            <strong>J</strong>a<strong>K</strong>ar<strong>T</strong>a48)
+                            adalah grup idola wanita Indonesia yang berbasis di Jakarta, Indonesia, di mana mereka
+                            memiliki
+                            teater mereka sendiri di mall <strong>fX Sudirman</strong>.
+                        </p>
 
+                        <p>
+                            Grup yang didirikan pada tahun 2011 ini merupakan grup saudari pertama dari AKB48 di luar
+                            Jepang.
+                            JKT48 diproduseri oleh Akimoto Yasushi, dan dimiliki oleh PT. Indonesia Musik Nusantara
+                            (bagian dari IDN Media), yang dibeli dari Dentsu Inter Admark Media Group Indonesia
+                            (bagian dari Dentsu) dan HITS Records (bagian dari MNC).
+                        </p>
 
-    <div class="section">
-        <div class="container">
-            <div class="box">
-                <h1 class="titleup"><span class="icon"><i class="fas fa-birthday-cake"></i></span> Next Birthday
-                    Member/Trainee JKT48
-                </h1>
-                <br />
-                <hr />
-                <br />
-                <div class="birthnext"></div>
-                <br />
-                <hr />
-            </div>
-        </div>
-    </div>
-    </div>
+                        <div class="team-section">
+                            <h2>Struktur Tim</h2>
+                            <p>Grup ini terdiri dari tiga tim:</p>
+                            <ul>
+                                <li class="team-name">Tim J</li>
+                                <li class="team-name">Tim KIII</li>
+                                <li class="team-name">Tim T</li>
+                            </ul>
+                            <p>Selain itu, grup ini juga memiliki <em>trainee</em> bernama <strong>Akademi
+                                    JKT48</strong>.</p>
+                        </div>
 
+                        <div class="trainee-section">
+                            <p>
+                                Pada bulan Maret 2021, grup ini membubarkan semua tim dan akademi, dan semua anggotanya
+                                kini hanya berada di bawah JKT48.
+                            </p>
+                        </div>
 
-    <div class="section">
-        <div class="container">
-            <div class="box">
-                <h1 class="titleup"><span class="icon"><i class="fas fa-user-friends"></i></span> 48 Group</h1>
-                <br />
-                <hr />
-                <br />
-                <div class="row">
-                    <div class="col-lg-3">
-                        <a href="https://www.akb48.co.jp/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/akb.png" alt="AKB48"
-                                loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="https://www.ske48.co.jp/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/ske.png" alt="SKE48"
-                                loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="http://www.nmb48.com/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/nmb.png" alt="NMB48"
-                                loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="http://www.hkt48.jp/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948757/hkt.png" alt="HKT48"
-                                loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="https://ngt48.jp/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/ngt.png" alt="NGT48"
-                                loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="https://www.stu48.com/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/stu.png" alt="STU48"
-                                loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="http://www.bnk48.com/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948757/bnk.png" alt="BNK48"
-                                loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="https://mnl48.ph/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/mnl.png" alt="MNL48"
-                                loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="http://www.akb48-china.com/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/akbsh.png"
-                                alt="AKBSH" loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="http://www.akb48teamtp.com/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/akbtp.png"
-                                alt="AKBTP" loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="https://cgm48official.com/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948757/cgm.png" alt="CGM48"
-                                loading="lazy" /></a>
-                    </div>
-                    <div class="col-lg-3">
-                        <a href="https://klp48.my/"><img
-                                src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/klp.png" alt="KLP48"
-                                loading="lazy" /></a>
+                        <div class="new-era">
+                            NEW ERA JKT48
+                        </div>
+                        <p>
+                            Sejak memasuki era proyek <strong>NEW ERA</strong> yang dimulai awal Januari 2022,
+                            JKT48 telah memiliki 2 formasi berbeda yaitu <strong>Member inti</strong> dan
+                            <em>Trainee</em>.
+                        </p>
+                    <br>
+                    <hr><br>
+
+                    <div data-aos="zoom-in" class="setlist-section">
+                        <h2>SETLIST JKT48</h2>
+                        <div class="setlist-grid">
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (1).png" loading="lazy" alt="Setlist 1"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Saka Agari </h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (2).png" loading="lazy" alt="Setlist 2"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Tunas Dibalik Seragam</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (3).png" loading="lazy" alt="Setlist 3"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Ingin Bertemu</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (4).png" loading="lazy" alt="Setlist 4"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Banzai</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (5).png" loading="lazy" alt="Setlist 5"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Idol no Yoake</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (6).png" loading="lazy" alt="Setlist 6"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Cara Meminum Ramune</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (7).png" loading="lazy" alt="Setlist 7"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Sambil menggandeng erat tanganku </h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (8).png" loading="lazy" alt="Setlist 8"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Pajama Drive</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (9).png" loading="lazy" alt="Setlist 9"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Demi Seseorang</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (10).png" loading="lazy" alt="Setlist 10"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Gadis-gadis remaja</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (11).png" loading="lazy" alt="Setlist 11"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Bel terakhir berbunyi</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (12).png" loading="lazy" alt="Setlist 12"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Matahari Milikku</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (13).png" loading="lazy" alt="Setlist 13"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Renai kinshi jourei </h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (14).png" loading="lazy" alt="Setlist 14"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Sekarang sedang jatuh cinta</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (15).png" loading="lazy" alt="Setlist 15"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Dewi Theater</h3>
+                            </div>
+                            <div class="setlist-item">
+                                <img src="/assets/jkt48setlis (16).png" loading="lazy" alt="Setlist 16"
+                                    class="setlist-image">
+                                <h3 class="setlist-title">Believe</h3>
+                            </div>
+                        </div>
+                        <hr><br>
                     </div>
                 </div>
-                <br />
-                <hr />
-                <br />
             </div>
-        </div>
-    </div>
 
-    <footer>
-        Powered by ♥️ <a style="text-decoration:none" href="https://48intens.com/discord"> 48Intens Official</a>
-        <div class="social-icons">
-            <p>Lets Connect With Us</p>
-            <a href="https://www.instagram.com/48intens" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram icon"></i>
-            </a>
-            <a href="https://48intens.com/discord" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-discord icon"></i>
-            </a>
-            <a href="about.html" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-wifi icon"></i>
-            </a>
-        </div>
-        <br>
-    </footer>
+            <div class="section">
+                <div class="container">
+                    <div class="box">
+                        <h1 class="titleup"><span class="icon"><i class="fas fa-theater-masks"></i></span> Upcoming
+                            Theater</h1>
+                        <br>
+                        <hr><br>
+                        <p id="noTheaterMessage"></p>
+                        <div data-aos="zoom-in" id="upcoming" class="card-container"></div>
+                        <br>
+                        <hr><br>
+                    </div>
+                </div>
+            </div>
 
-    <script>
-        // smooth scroll
+            <div class="section">
+                <div class="container">
+                    <div class="box">
+                        <h1 class="titleup">
+                            <span class="icon"><i class="fab fa-youtube"></i></span>
+                            Youtube JKT48
+                        </h1>
+                        <br>
+                        <hr><br>
+                        <div id="loading" class="loading">Loading videos...</div>
+                        <div data-aos="zoom-in" id="ytupcoming" class="youtube-card-container"></div>
+                        <br>
+                        <hr><br>
+                    </div>
+                </div>
+            </div>
 
-        window.onscroll = function () { scrollFunction() };
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("scrollToTopBtn").style.display = "block";
-            } else {
-                document.getElementById("scrollToTopBtn").style.display = "none";
-            }
-        }
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
 
-        // lazy load
+            <div class="section">
+                <div class="container">
+                    <div class="flex-container">
+                        <div class="box-news">
+                            <h1 class="titleup"><span class="icon"><i class="fas fa-newspaper"></i></span> News</h1>
+                            <br />
+                            <hr />
+                            <div id="newsLimit"></div>
+                            <br />
+                            <a href="/news" class="btn">Cek lainnya</a><br />
+                        </div>
+                        <div class="box-event">
+                            <h1 class="titleup"><span class="icon"><i class="fas fa-calendar"></i></span> Event</h1>
+                            <br />
+                            <hr />
+                            <div id="eventList"></div>
+                            <br />
+                            <a href="/news" class="btn">Cek lainnya</a><br />
+                        </div>
+                        <div class="box-special">
+                            <h1 class="titleup"><span class="icon"><i class="fas fa-envelope"></i></span> Special Links
+                            </h1>
+                            <br />
+                            <hr />
+                            <div class="link-item">
+                                <a href="https://jkt48.com/theater/mvp?lang=id">⭐ JKT48 THEATER MVP</a>
+                            </div>
+                            <hr />
+                            <div class="link-item">
+                                <a href="https://jkt48.com/about/fanletter?lang=id">💌 FAN LETTER AND GIFT INFO</a>
+                            </div>
+                            <hr />
+                            <div class="link-item">
+                                <a href="https://jkt48.com/about/handshake?lang=id">🫱 YUK KITA HANDSHAKE</a>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        document.addEventListener("DOMContentLoaded", function () {
-            var lazyloadImages;
 
-            if ("IntersectionObserver" in window) {
-                lazyloadImages = document.querySelectorAll(".lazy");
-                var imageObserver = new IntersectionObserver(function (entries, observer) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            var image = entry.target;
-                            image.src = image.dataset.src;
-                            image.classList.remove("lazy");
-                            imageObserver.unobserve(image);
-                        }
-                    });
-                });
+            <div class="section">
+                <div class="container">
+                    <div class="box">
+                        <h1 class="titleup"><span class="icon"><i class="fas fa-birthday-cake"></i></span> Next Birthday
+                            Member/Trainee JKT48
+                        </h1>
+                        <br />
+                        <hr />
+                        <br />
+                        <div class="birthnext"></div>
+                        <br />
+                        <hr />
+                    </div>
+                </div>
+            </div>
 
-                lazyloadImages.forEach(function (image) {
-                    imageObserver.observe(image);
-                });
-            } else {
-                var lazyloadThrottleTimeout;
 
-                function lazyload() {
-                    if (lazyloadThrottleTimeout) {
-                        clearTimeout(lazyloadThrottleTimeout);
+            <div class="section">
+                <div class="container">
+                    <div class="box">
+                        <h1 class="titleup"><span class="icon"><i class="fas fa-user-friends"></i></span> 48 Group</h1>
+                        <br />
+                        <hr />
+                        <br />
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <a href="https://www.akb48.co.jp/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/akb.png"
+                                        alt="AKB48" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="https://www.ske48.co.jp/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/ske.png"
+                                        alt="SKE48" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="http://www.nmb48.com/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/nmb.png"
+                                        alt="NMB48" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="http://www.hkt48.jp/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948757/hkt.png"
+                                        alt="HKT48" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="https://ngt48.jp/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/ngt.png"
+                                        alt="NGT48" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="https://www.stu48.com/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/stu.png"
+                                        alt="STU48" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="http://www.bnk48.com/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948757/bnk.png"
+                                        alt="BNK48" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="https://mnl48.ph/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/mnl.png"
+                                        alt="MNL48" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="http://www.akb48-china.com/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/akbsh.png"
+                                        alt="AKBSH" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="http://www.akb48teamtp.com/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/akbtp.png"
+                                        alt="AKBTP" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="https://cgm48official.com/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948757/cgm.png"
+                                        alt="CGM48" loading="lazy" /></a>
+                            </div>
+                            <div class="col-lg-3">
+                                <a href="https://klp48.my/"><img
+                                        src="https://res.cloudinary.com/dbim4qou7/image/upload/v1718948758/klp.png"
+                                        alt="KLP48" loading="lazy" /></a>
+                            </div>
+                        </div>
+                        <br />
+                        <hr />
+                        <br />
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                Powered by ♥️ <a style="text-decoration:none" href="https://48intens.com/discord"> 48Intens Official</a>
+                <div class="social-icons">
+                    <p>Lets Connect With Us</p>
+                    <a href="https://www.instagram.com/48intens" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram icon"></i>
+                    </a>
+                    <a href="https://48intens.com/discord" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-discord icon"></i>
+                    </a>
+                    <a href="about.html" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-wifi icon"></i>
+                    </a>
+                </div>
+                <br>
+            </footer>
+
+            <script>
+                // smooth scroll
+
+                window.onscroll = function () { scrollFunction() };
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("scrollToTopBtn").style.display = "block";
+                    } else {
+                        document.getElementById("scrollToTopBtn").style.display = "none";
                     }
-
-                    lazyloadThrottleTimeout = setTimeout(function () {
-                        var scrollTop = window.pageYOffset;
-                        lazyloadImages = document.querySelectorAll(".lazy");
-                        lazyloadImages.forEach(function (img) {
-                            if (img.offsetTop < (window.innerHeight + scrollTop)) {
-                                img.src = img.dataset.src;
-                                img.classList.remove('lazy');
-                            }
-                        });
-                        if (lazyloadImages.length == 0) {
-                            document.removeEventListener("scroll", lazyload);
-                            window.removeEventListener("resize", lazyload);
-                            window.removeEventListener("orientationChange", lazyload);
-                        }
-                    }, 20);
+                }
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
                 }
 
-                document.addEventListener("scroll", lazyload);
-                window.addEventListener("resize", lazyload);
-                window.addEventListener("orientationChange", lazyload);
-                lazyload();
-            }
-        });
+                // lazy load
 
-        // loader script
-        const loader = document.getElementById('loader');
-        setTimeout(() => {
-            loader.classList.add('hide');
-            document.body.style.overflow = 'visible';
-        }, 3000)
-        document.body.style.overflow = 'hidden';
+                document.addEventListener("DOMContentLoaded", function () {
+                    var lazyloadImages;
 
+                    if ("IntersectionObserver" in window) {
+                        lazyloadImages = document.querySelectorAll(".lazy");
+                        var imageObserver = new IntersectionObserver(function (entries, observer) {
+                            entries.forEach(function (entry) {
+                                if (entry.isIntersecting) {
+                                    var image = entry.target;
+                                    image.src = image.dataset.src;
+                                    image.classList.remove("lazy");
+                                    imageObserver.unobserve(image);
+                                }
+                            });
+                        });
 
-        // discord 
+                        lazyloadImages.forEach(function (image) {
+                            imageObserver.observe(image);
+                        });
+                    } else {
+                        var lazyloadThrottleTimeout;
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const discordWidgetURL = 'https://discord.com/api/guilds/1185883650206744576/widget.json';
+                        function lazyload() {
+                            if (lazyloadThrottleTimeout) {
+                                clearTimeout(lazyloadThrottleTimeout);
+                            }
 
-            function fetchMemberCount() {
-                fetch(discordWidgetURL)
-                    .then(response => response.json())
-                    .then(data => {
-                        const memberCountElement = document.getElementById('memberCount');
-                        if (data && data.presence_count) {
-                            memberCountElement.innerText = `${data.presence_count} members online`;
-                        } else {
-                            memberCountElement.innerText = "Unable to load member count";
+                            lazyloadThrottleTimeout = setTimeout(function () {
+                                var scrollTop = window.pageYOffset;
+                                lazyloadImages = document.querySelectorAll(".lazy");
+                                lazyloadImages.forEach(function (img) {
+                                    if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                                        img.src = img.dataset.src;
+                                        img.classList.remove('lazy');
+                                    }
+                                });
+                                if (lazyloadImages.length == 0) {
+                                    document.removeEventListener("scroll", lazyload);
+                                    window.removeEventListener("resize", lazyload);
+                                    window.removeEventListener("orientationChange", lazyload);
+                                }
+                            }, 20);
                         }
-                    })
-                    .catch(error => {
-                        console.error("Error fetching Discord member count:", error);
-                        document.getElementById('memberCount').innerText = "Unable to load member count";
-                    });
-            }
-            setInterval(fetchMemberCount, 5000);
-            fetchMemberCount();
-        });
 
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+                        document.addEventListener("scroll", lazyload);
+                        window.addEventListener("resize", lazyload);
+                        window.addEventListener("orientationChange", lazyload);
+                        lazyload();
+                    }
+                });
+
+                // loader script
+                const loader = document.getElementById('loader');
+                setTimeout(() => {
+                    loader.classList.add('hide');
+                    document.body.style.overflow = 'visible';
+                }, 3000)
+                document.body.style.overflow = 'hidden';
+
+
+                // discord 
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    const discordWidgetURL = 'https://discord.com/api/guilds/1185883650206744576/widget.json';
+
+                    function fetchMemberCount() {
+                        fetch(discordWidgetURL)
+                            .then(response => response.json())
+                            .then(data => {
+                                const memberCountElement = document.getElementById('memberCount');
+                                if (data && data.presence_count) {
+                                    memberCountElement.innerText = `${data.presence_count} members online`;
+                                } else {
+                                    memberCountElement.innerText = "Unable to load member count";
+                                }
+                            })
+                            .catch(error => {
+                                console.error("Error fetching Discord member count:", error);
+                                document.getElementById('memberCount').innerText = "Unable to load member count";
+                            });
+                    }
+
+                    fetchMemberCount();
+                });
+
+            </script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
 
 
 
-    <!--SCRIPT-->
-    <script src="script/birthday.js"></script>
-    <script src="script/nowlive.js"></script>
-    <script src="script/event.js"></script>
-    <script src="script/news.js"></script>
-    <script src="script/theater.js"></script>
-    <script src="script/youtube.js"></script>
-    <script src="script/image.js"></script>
-    <script src="script/inject.js"></script>
-    <script src="/middleware/middleware.js"></script>
-    <script src="script/log.js"></script>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-</body>
+            <!--SCRIPT-->
+            <script src="script/birthday.js"></script>
+            <script src="script/nowlive.js"></script>
+            <script src="script/event.js"></script>
+            <script src="script/news.js"></script>
+            <script src="script/theater.js"></script>
+            <script src="script/youtube.js"></script>
+            <script src="script/image.js"></script>
+            <script src="script/inject.js"></script>
+            <script src="/middleware/middleware.js"></script>
+            <script src="script/log.js"></script>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </body>
 
-</html>
+    </html>
