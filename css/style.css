@@ -2106,6 +2106,15 @@ footer a:hover {
 		font-size: 14px;
 	}
 
+	 .setlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .setlist-image {
+    height: 250px;
+  }
+
 	/* Responsive styles for mobile devices */
 	@media (max-width: 768px) {
 		.youtube-card {
@@ -2132,6 +2141,15 @@ footer a:hover {
 			/* Full-width cards for small mobile screens */
 			margin-bottom: 15px;
 		}
+
+		  .setlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .setlist-image {
+    height: 200px;
+  }
 
 
 
