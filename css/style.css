@@ -1813,11 +1813,12 @@ footer a:hover {
 		height: 6px;
 	}
 
-	.slideshow-image img {
-		width: 650px;
-		height: 129px;
-		border-radius: 20px;
-	}
+  .slideshow-image img {
+    width: 650px;
+    height: 129px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
 
 	.slideshow-container {
 		width: 95%;
