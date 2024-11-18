@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(response => response.json())
     .then(data => {
       const container = document.querySelector('.card-nowlive-container-up');
+      const liveMemberNameElement = document.getElementById('liveMemberName');
       const liveMembers = data.filter(member => member.started_at);
       const liveCount = liveMembers.length;
 
@@ -119,7 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
           const cardBody = document.createElement('div');
           cardBody.classList.add('card-body-nowlive');
 
-          document.getElementById('liveMemberName').textContent = `⭐ ${nlive.name}`;
+          if (liveMemberNameElement && liveMembers[index]) {
+            liveMemberNameElement.textContent = `⭐ ${liveMembers[index].name}`;
+        }
+
           const title = document.createElement('h5');
           title.classList.add('card-title');
           title.textContent = `⭐ Name: ${nlive.name}`;
