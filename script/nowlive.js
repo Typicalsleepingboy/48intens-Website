@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         container.innerHTML = ''; // Clear existing content
 
         const idnurl = 'https://www.idn.app/';
-        liveMembers.forEach(nlive => {
+       liveMembers.forEach((nlive, index) => {
           const card = document.createElement('div');
           card.classList.add('card-nowlive-up');
 
