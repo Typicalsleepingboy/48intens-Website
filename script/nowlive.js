@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         container.innerHTML = ''; // Clear existing content
 
         const idnurl = 'https://www.idn.app/';
-       liveMembers.forEach((nlive, index) => {
+        liveMembers.forEach(nlive => {
           const card = document.createElement('div');
           card.classList.add('card-nowlive-up');
 
@@ -120,9 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
           const cardBody = document.createElement('div');
           cardBody.classList.add('card-body-nowlive');
 
-          if (liveMemberNameElement && liveMembers[index]) {
-            liveMemberNameElement.textContent = `⭐ ${liveMembers[index].name}`;
-        }
+          // Update Nama Member sesuai
+          if (liveMemberNameElement) {
+            liveMemberNameElement.textContent = `⭐ ${nlive.name}`;
+          }
 
           const title = document.createElement('h5');
           title.classList.add('card-title');
@@ -179,4 +180,6 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Halaman Now Live berhasil di-refresh: " + new Date().toLocaleString());
     })
     .catch(error => console.error('Error fetching NOW LIVE:', error));
+});
+
 });
