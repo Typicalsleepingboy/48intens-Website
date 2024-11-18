@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const sumber = 'https://api.crstlnz.my.id/api/now_live?group=jkt48';
 
-  fetch(sumber, { mode: 'no-cors' })
+  fetch(sumber)
     .then(response => response.json())
     .then(data => {
       const container = document.querySelector('.card-nowlive-container');
